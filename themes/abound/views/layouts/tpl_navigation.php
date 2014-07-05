@@ -17,18 +17,18 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
                     'items'=>array(
-                        array('label'=>'Dashboard', 'url'=>array('/site/index')),
-                        array('label'=>'Master Data <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
+                        array('label'=>'<i class="icon-white icon-home"></i> Dashboard', 'url'=>array('/site/index')),
+                        array('label'=>'<i class="icon-white icon-list-alt"></i> Master Data <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
                         'items'=>array(
-                            array('label'=>'Data Provinsi', 'url'=>array('/provinsi')),
-                            array('label'=>'Data Kabupaten', 'url'=>array('/kabupaten')),
-                            array('label'=>'Data Kecamatan', 'url'=>array('/kecamatan')),
-                            array('label'=>'Data Kelurahan/Desa', 'url'=>array('/desa_kelurahan')),
+                            array('label'=>'<i class="icon icon-list-alt"></i> Data Provinsi', 'url'=>array('/provinsi')),
+                            array('label'=>'<i class="icon icon-list-alt"></i> Data Kabupaten', 'url'=>array('/kabupaten')),
+                            array('label'=>'<i class="icon icon-list-alt"></i> Data Kecamatan', 'url'=>array('/kecamatan')),
+                            array('label'=>'<i class="icon icon-list-alt"></i> Data Kelurahan/Desa', 'url'=>array('/desa_kelurahan')),
                         )),
-                        array('label'=>'Data Kependudukan', 'url'=>array('/rumah_tangga')),
-                        array('label'=>'Account', 'url'=>array('/site/page', 'view'=>'graphs')),
-                        array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                        array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'<i class="icon-white icon-fire"></i> Data Kependudukan', 'url'=>array('/rumah_tangga')),
+                        array('label'=>'<i class="icon-white icon-leaf"></i> Account', 'url'=>array('/site/page', 'view'=>'graphs')),
+                        array('label'=>'<i class="icon-white icon-user"></i> Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                        array('label'=>'<i class="icon-white icon-share"></i> Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
                     ),
                 )); ?>
     	</div>
@@ -36,11 +36,6 @@
 	</div>
 </div>
 
-<div class="subnav navbar navbar-fixed-top">
-    <div class="navbar-inner">
-    	<div class="container">
-        
-        	
-    	</div><!-- container -->
-    </div><!-- navbar-inner -->
+<div class="subnav">
+    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/banner.jpg">
 </div><!-- subnav -->

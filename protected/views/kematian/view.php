@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'<i class="icon icon-list"></i> List Kematian', 'url'=>array('kematian/index/'.$id)),
-	array('label'=>'<i class="icon icon-adjust"></i> Create Kematian', 'url'=>array('kematian/create/'.$id)),
+	array('label'=>'<i class="icon icon-list"></i> List Kematian', 'url'=>array('kematian/index/'.$model->id_rt)),
+	array('label'=>'<i class="icon icon-adjust"></i> Create Kematian', 'url'=>array('kematian/create/'.$model->id_rt)),
 	array('label'=>'<i class="icon icon-share"></i> Update Kematian', 'url'=>array('update', 'id'=>$model->id_kematian)),
 	array('label'=>'<i class="icon icon-trash"></i> Delete Kematian', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_kematian),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'<i class="icon icon-list-alt"></i> Manage Kematian', 'url'=>array('kematian/admin/'.$id)),
+	array('label'=>'<i class="icon icon-list-alt"></i> Manage Kematian', 'url'=>array('kematian/admin/'.$model->id_rt)),
 );
 ?>
 

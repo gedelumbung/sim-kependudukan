@@ -57,67 +57,6 @@ class Keterangan_keluargaController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new KeteranganKeluarga;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['KeteranganKeluarga']))
-		{
-			$model->attributes=$_POST['KeteranganKeluarga'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_keterangan_keluarga));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['KeteranganKeluarga']))
-		{
-			$model->attributes=$_POST['KeteranganKeluarga'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_keterangan_keluarga));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
-
-	/**
 	 * Lists all models.
 	 */
 	public function actionIndex($id)
@@ -125,7 +64,7 @@ class Keterangan_keluargaController extends Controller
 		$criteria=new CDbCriteria;
 
 		$criteria->condition = "id_rt = '".$id."'";
-		$m=KeteranganKeluarga::model()->find($criteria);
+		$m=KeteranganKeluarga::model()->findByAttributes(array(),$criteria);
 
 		if($m===null)
 		{
@@ -135,7 +74,7 @@ class Keterangan_keluargaController extends Controller
 			{
 				$model->attributes=$_POST['KeteranganKeluarga'];
 				if($model->save())
-					$this->redirect(array('view','id'=>$model->id_keterangan_keluarga));
+					$this->redirect(array('index','id'=>$model->id_rt));
 			}
 
 			$this->render('create',array(
@@ -151,30 +90,16 @@ class Keterangan_keluargaController extends Controller
 			{
 				$model->attributes=$_POST['KeteranganKeluarga'];
 				if($model->save())
-					$this->redirect(array('view','id'=>$model->id_keterangan_keluarga));
+					$this->redirect(array('index','id'=>$model->id_rt));
 			}
 
 			$this->render('update',array(
 				'model'=>$model,
+				'id'=>$id,
 			));
 		}
 	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new KeteranganKeluarga('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['KeteranganKeluarga']))
-			$model->attributes=$_GET['KeteranganKeluarga'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
-
+	
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -184,9 +109,10 @@ class Keterangan_keluargaController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=KeteranganKeluarga::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+		$criteria=new CDbCriteria;
+
+		$criteria->condition = "id_rt = '".$id."'";
+		$model=KeteranganKeluarga::model()->findByAttributes(array(),$criteria);
 		return $model;
 	}
 

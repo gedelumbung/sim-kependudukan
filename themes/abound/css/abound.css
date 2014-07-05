@@ -33,6 +33,7 @@ and (min-width : 1224px) {
 	.container-fluid{padding-top: 100px;}
 	.navbar .brand {margin-left:-50px;}
 	.style-switcher{margin-left:-70px;}
+  .subnav{ margin-bottom: -80px;}
 }
 
 /* Large screens ----------- */

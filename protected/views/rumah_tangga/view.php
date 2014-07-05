@@ -54,11 +54,11 @@ $this->menu=array(
 			   array(
 			   	'label'=>'Keterangan Perorangan',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Kesehatan', 'url'=>array('index')),
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Balita', 'url'=>array('index')),
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Pendidikan', 'url'=>array('index')),
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Ketenagakerjaan', 'url'=>array('index')),
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Fertilitas / Keluarga Berencana', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Kesehatan', 'url'=>array('kesehatan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Balita', 'url'=>array('balita/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Pendidikan', 'url'=>array('pendidikan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Ketenagakerjaan', 'url'=>array('ketenagakerjaan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Fertilitas / Keluarga Berencana', 'url'=>array('kb/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),

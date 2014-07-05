@@ -53,13 +53,13 @@ class KeteranganKeluarga extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama_kepala_rt, jenis_kelamin_rt, jumlah_keluarga, jumlah_anggota_keluarga, jenis_lantai_bangunan, jenis_dinding_bangunan, fasilitas_buang_air, sumber_air, sumber_penerangan, jenis_bahan_bakar_memasak, frekuensi_membeli_daging_seminggu, frekuensi_makan_perhari, kuantitas_membeli_pakaian_pertahun, kemampuan_berobat, pekerjaan_kepala_rt, pendidikan_kepala_rt, tabungan, emas, televisi, ternak, sepeda_motor, art_balita, art_7_18, art_7_18_sd, art_7_18_smp, art_7_18_sma, art_7_18_tidak_sekolah, art_10_49, kredit_usaha', 'required'),
+			array('nama_kepala_rt, id_rt, jenis_kelamin_rt, jumlah_keluarga, jumlah_anggota_keluarga, jenis_lantai_bangunan, jenis_dinding_bangunan, fasilitas_buang_air, sumber_air, sumber_penerangan, jenis_bahan_bakar_memasak, frekuensi_membeli_daging_seminggu, frekuensi_makan_perhari, kuantitas_membeli_pakaian_pertahun, kemampuan_berobat, pekerjaan_kepala_rt, pendidikan_kepala_rt, tabungan, emas, televisi, ternak, sepeda_motor, art_balita, art_7_18, art_7_18_sd, art_7_18_smp, art_7_18_sma, art_7_18_tidak_sekolah, art_10_49, kredit_usaha', 'required'),
 			array('jumlah_keluarga, jumlah_anggota_keluarga', 'numerical', 'integerOnly'=>true),
 			array('nama_kepala_rt', 'length', 'max'=>150),
 			array('jenis_kelamin_rt', 'length', 'max'=>20),
 			array('jenis_lantai_bangunan, jenis_dinding_bangunan, fasilitas_buang_air, sumber_air, sumber_penerangan, jenis_bahan_bakar_memasak, frekuensi_membeli_daging_seminggu, frekuensi_makan_perhari, kuantitas_membeli_pakaian_pertahun, kemampuan_berobat, pekerjaan_kepala_rt, pendidikan_kepala_rt', 'length', 'max'=>100),
 			array('tabungan, emas, televisi, ternak, sepeda_motor', 'length', 'max'=>5),
-			array('art_balita, art_7_18, art_7_18_sd, art_7_18_smp, art_7_18_sma, art_7_18_tidak_sekolah, art_10_49, kredit_usaha', 'length', 'max'=>50),
+			array('art_balita, art_7_18, art_7_18_sd, art_7_18_smp, art_7_18_sma, art_7_18_tidak_sekolah, art_10_49, kredit_usaha', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_keterangan_keluarga, nama_kepala_rt, jenis_kelamin_rt, jumlah_keluarga, jumlah_anggota_keluarga, jenis_lantai_bangunan, jenis_dinding_bangunan, fasilitas_buang_air, sumber_air, sumber_penerangan, jenis_bahan_bakar_memasak, frekuensi_membeli_daging_seminggu, frekuensi_makan_perhari, kuantitas_membeli_pakaian_pertahun, kemampuan_berobat, pekerjaan_kepala_rt, pendidikan_kepala_rt, tabungan, emas, televisi, ternak, sepeda_motor, art_balita, art_7_18, art_7_18_sd, art_7_18_smp, art_7_18_sma, art_7_18_tidak_sekolah, art_10_49, kredit_usaha', 'safe', 'on'=>'search'),
@@ -84,6 +84,7 @@ class KeteranganKeluarga extends CActiveRecord
 	{
 		return array(
 			'id_keterangan_keluarga' => 'Id Keterangan Keluarga',
+			'id_rt' => 'Id Rt',
 			'nama_kepala_rt' => 'Nama Kepala Rt',
 			'jenis_kelamin_rt' => 'Jenis Kelamin Rt',
 			'jumlah_keluarga' => 'Jumlah Keluarga',

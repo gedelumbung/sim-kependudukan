@@ -1,29 +1,14 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
-?>
-<div class="page-header">
-	<h1>Login <small>to your account</small></h1>
-</div>
 <div class="row-fluid">
 	
-    <div class="span6 offset3">
+    <div class="span3"></div>
+    <div class="span6">
 <?php
 	$this->beginWidget('zii.widgets.CPortlet', array(
 		'title'=>"Private access",
 	));
 	
 ?>
-
-
-
-    <p>Please fill out the following form with your login credentials:</p>
     
     <div class="form">
     <?php $form=$this->beginWidget('CActiveForm', array(
@@ -38,17 +23,14 @@ $this->breadcrumbs=array(
     
         <div class="row">
             <?php echo $form->labelEx($model,'username'); ?>
-            <?php echo $form->textField($model,'username'); ?>
+            <?php echo $form->textField($model,'username', array('class'=>'input-block-level')); ?>
             <?php echo $form->error($model,'username'); ?>
         </div>
     
         <div class="row">
             <?php echo $form->labelEx($model,'password'); ?>
-            <?php echo $form->passwordField($model,'password'); ?>
+            <?php echo $form->passwordField($model,'password', array('class'=>'input-block-level')); ?>
             <?php echo $form->error($model,'password'); ?>
-            <p class="hint">
-                Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-            </p>
         </div>
     
         <div class="row rememberMe">
@@ -67,5 +49,6 @@ $this->breadcrumbs=array(
 <?php $this->endWidget();?>
 
     </div>
+    <div class="span3"></div>
 
 </div>

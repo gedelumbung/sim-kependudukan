@@ -3,20 +3,16 @@
 /* @var $model KeteranganKeluarga */
 
 $this->breadcrumbs=array(
-	'Keterangan Keluarga'=>array('index'),
-	$model->id_keterangan_keluarga,
+	'Keterangan Keluarga'=>array('index','id'=>$model->id_rt),
+	$model->id_rt,
 );
 
 $this->menu=array(
-	array('label'=>'<i class="icon icon-list"></i> List KeteranganKeluarga', 'url'=>array('index')),
-	array('label'=>'<i class="icon icon-adjust"></i> Create KeteranganKeluarga', 'url'=>array('create')),
-	array('label'=>'<i class="icon icon-share"></i> Update KeteranganKeluarga', 'url'=>array('update', 'id'=>$model->id_keterangan_keluarga)),
-	array('label'=>'<i class="icon icon-trash"></i> Delete KeteranganKeluarga', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_keterangan_keluarga),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'<i class="icon icon-list-alt"></i> Manage KeteranganKeluarga', 'url'=>array('admin')),
+	array('label'=>'<i class="icon icon-eye-open"></i> Manage KeteranganKeluarga', 'url'=>array('index', 'id'=>$model->id_rt)),
 );
 ?>
 
-<h3>View KeteranganKeluarga #<?php echo $model->id_keterangan_keluarga; ?></h3>
+<h3>View Keterangan Keluarga #<?php echo $model->id_keterangan_keluarga; ?></h3>
 
 <div class="portlet">
 <div class="portlet-decoration">
