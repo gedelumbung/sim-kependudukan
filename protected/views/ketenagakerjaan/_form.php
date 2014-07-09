@@ -85,10 +85,12 @@
 			</div>
 		</div>
 
+		<h5>Jika "Ya", kegiatan apakah yang menggunakan waktu paling banyak?</h5>
+
 		<div class="row">
 			<?php echo $form->labelEx($model,'kegiatan_terbanyak'); ?>
 								<?php echo CHtml::dropDownList(
-												'ArtPerorangan[bekerja]',$model->bekerja,
+												'ArtPerorangan[kegiatan_terbanyak]',$model->bekerja,
 												array(
 													''=>'Semua',
 													'Bekerja'=>'Bekerja',
@@ -101,6 +103,8 @@
 			<?php echo $form->error($model,'kegiatan_terbanyak'); ?>
 		</div>
 
+		<h5>24. Apakah mempunyai pekerjaan/usaha, tetapi sementara tidak bekerja selama seminggu yang lalu?</h5>
+
 		<div class="row">
 			<?php echo $form->labelEx($model,'tidak_bekerja_sementara'); ?>
 								<?php echo CHtml::dropDownList(
@@ -108,33 +112,49 @@
 			<?php echo $form->error($model,'tidak_bekerja_sementara'); ?>
 		</div>
 
+		<h5>25. Apakah sedang mencari pekerjaan?</h5>
+
 		<div class="row">
 			<?php echo $form->labelEx($model,'mencari_pekerjaan'); ?>
 								<?php echo CHtml::dropDownList(
 												'ArtPerorangan[mencari_pekerjaan]',$model->mencari_pekerjaan,array(''=>'Semua','Ya'=>'Ya','Tidak'=>'Tidak')); ?>
 			<?php echo $form->error($model,'mencari_pekerjaan'); ?>
 		</div>
-	</div>
 
-	<div class="span6">
+		<h5>26. Apakah sedang mempersiapkan suatu usaha selama seminggu yang lalu?</h5>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'membuat_usaha'); ?>
-			<?php echo $form->textField($model,'membuat_usaha',array('size'=>60,'maxlength'=>150, 'class'=>'input-block-level')); ?>
+								<?php echo CHtml::dropDownList(
+												'ArtPerorangan[membuat_usaha]',$model->membuat_usaha,array(''=>'Semua','Ya'=>'Ya','Tidak'=>'Tidak')); ?>
 			<?php echo $form->error($model,'membuat_usaha'); ?>
 		</div>
+
+		<h5><p>Jika 25 dan 26 dijawab tidak</p></h5>
+
+		<h5>27. Alasan utama tidak mencari pekerjaan/mempersiapkan usaha?</h5>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'alasan_tidak_bekerja'); ?>
 			<?php echo $form->textField($model,'alasan_tidak_bekerja',array('size'=>60,'maxlength'=>150, 'class'=>'input-block-level')); ?>
 			<?php echo $form->error($model,'alasan_tidak_bekerja'); ?>
 		</div>
+	</div>
+
+	<div class="span6">
+
+		<h5>28. Jika ada penawaran pekerjaan, apakah masih mau menerima?</h5>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'jika_ada_tawaran'); ?>
-			<?php echo $form->textField($model,'jika_ada_tawaran',array('size'=>60,'maxlength'=>150, 'class'=>'input-block-level')); ?>
+								<?php echo CHtml::dropDownList(
+												'ArtPerorangan[jika_ada_tawaran]',$model->jika_ada_tawaran,array(''=>'Semua','Ya'=>'Ya','Tidak'=>'Tidak')); ?>
 			<?php echo $form->error($model,'jika_ada_tawaran'); ?>
 		</div>
+
+		<h5>Hanya untuk ART yang bekerja</h5>
+
+		<h5>29. Jumlah hari kerja dan jumlah jam kerja</h5>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'hari_kerja'); ?>
@@ -148,11 +168,15 @@
 			<?php echo $form->error($model,'jumlah_jam_kerja_seminggu'); ?>
 		</div>
 
+		<h5>30. Lapangan usaha/bidang pekerjaan utama dari tempat bekerja selama seminggu yang lalu</h5>
+
 		<div class="row">
 			<?php echo $form->labelEx($model,'lapangan_usaha'); ?>
 			<?php echo $form->textField($model,'lapangan_usaha',array('size'=>60,'maxlength'=>150, 'class'=>'input-block-level')); ?>
 			<?php echo $form->error($model,'lapangan_usaha'); ?>
 		</div>
+
+		<h5>31. jenis pekerjaan/jabatan dari pekerjaan utama selama seminggu yang lalu</h5>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'jenis_pekerjaan'); ?>
@@ -160,11 +184,28 @@
 			<?php echo $form->error($model,'jenis_pekerjaan'); ?>
 		</div>
 
+		<h5>32. Status/kedudukan dalam pekerjaan utama selama seminggu yang lalu</h5>
+
 		<div class="row">
 			<?php echo $form->labelEx($model,'jabatan_pekerjaan'); ?>
-			<?php echo $form->textField($model,'jabatan_pekerjaan',array('size'=>60,'maxlength'=>150, 'class'=>'input-block-level')); ?>
+								<?php echo CHtml::dropDownList(
+												'ArtPerorangan[jabatan_pekerjaan]',$model->bekerja,
+												array(
+													''=>'Semua',
+													'Berusaha sendiri'=>'Berusaha sendiri',
+													'Berusaha dibantu buruh tidak tetap/buruh tidak dibayar'=>'Berusaha dibantu buruh tidak tetap/buruh tidak dibayar',
+													'Berusaha dibantu buruh tetap buruh bayar'=>'Berusaha dibantu buruh tetap buruh bayar',
+													'Buruh / Karyawan / Pegawai'=>'Buruh / Karyawan / Pegawai',
+													'Pekerja bebas di pertanian'=>'Pekerja bebas di pertanian',
+													'Pekerja bebas di non pertanian'=>'Pekerja bebas di non pertanian',
+													'Pekerja tidak dibayar'=>'Pekerja tidak dibayar',
+												)
+											); 
+										?>
 			<?php echo $form->error($model,'jabatan_pekerjaan'); ?>
 		</div>
+
+		<h5>33. Berapa upah/gaji bersih (uang dan barang) yang biasanya diterima selama sebulan dari pekerjaan utama?</h5>
 
 		<div class="row">
 			<?php echo $form->labelEx($model,'gaji'); ?>

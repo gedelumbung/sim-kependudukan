@@ -25,7 +25,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id_keterangan_keluarga',
-		'id_rt',
+		'RumahTangga.nama_krt',
 		'nama_kepala_rt',
 		'jenis_kelamin_rt',
 		'jumlah_keluarga',

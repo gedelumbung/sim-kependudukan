@@ -16,7 +16,22 @@ $this->menu=array(
 );
 ?>
 
-<h3>View RumahTangga #<?php echo $model->id_rt; ?></h3>
+<style type="text/css">
+	ul li {
+		list-style: none;
+	}
+	ul li ul{
+		margin-left: 0px;
+	}
+	.span12 ul li ul li{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	h3{
+		font-family: 'Telex', Arial;
+		font-size: 20px;
+	}
+</style>
 
 <div class="portlet">
 <div class="portlet-decoration">
@@ -28,14 +43,15 @@ $this->menu=array(
 
 
 <div class="row-fluid">
-	<div class="span6">
+	<div class="span12 alert alert-danger">
+		<h3 class="fa fa-briefcase"><strong> Keterangan Rumah Tangga</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Rumah Tangga',
+			   	'label'=>'',
 			   	'items'=>array(
 							array('label'=>'<i class="icon icon-list"></i> Keterangan Anggota Rumah Tangga', 'url'=>array('art/index/'.$id)),
 							array('label'=>'<i class="icon icon-list"></i> Kejadian Kematian di Rumah Tangga', 'url'=>array('kematian/index/'.$id)),
@@ -45,14 +61,17 @@ $this->menu=array(
 			 ),
 		));?>
 	</div>
-	<div class="span6">
+</div>
+<div class="row-fluid">
+	<div class="span12 alert alert-danger">
+		<h3 class="fa fa-drupal"><strong> Keterangan Perorangan</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Perorangan',
+			   	'label'=>'',
 			   	'items'=>array(
 							array('label'=>'<i class="icon icon-list"></i> Keterangan Kesehatan', 'url'=>array('kesehatan/index', 'id'=>$id)),
 							array('label'=>'<i class="icon icon-list"></i> Keterangan Balita', 'url'=>array('balita/index', 'id'=>$id)),
@@ -66,31 +85,33 @@ $this->menu=array(
 	</div>
 </div>
 <div class="row-fluid">
-	<div class="span6">
+	<div class="span6 alert alert-danger">
+		<h3 class="fa fa-building"><strong> Keterangan Perumahan</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Perumahan',
+			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Perumahan', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Perumahan', 'url'=>array('perumahan/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),
 		));?>
 	</div>
-	<div class="span6">
+	<div class="span6 alert alert-danger">
+		<h3 class="fa fa-fax"><strong> Keterangan Teknologi</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Teknologi',
+			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Teknologi & Komunikasi', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Teknologi & Komunikasi', 'url'=>array('tik/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),
@@ -98,30 +119,35 @@ $this->menu=array(
 	</div>
 </div>
 <div class="row-fluid">
-	<div class="span6">
+	<div class="span12 alert alert-danger">
+		<h3 class="fa fa-file-archive-o"><strong> Keterangan Pengeluaran Rumah Tangga</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Pengeluaran Rumah Tangga',
+			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Pengeluaran Rumah Tangga Pangan', 'url'=>array('index')),
-							array('label'=>'<i class="icon icon-list"></i> Pengeluaran Rumah Tangga Non Pangan', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Pengeluaran Rumah Tangga Pangan', 'url'=>array('pengeluaran_pangan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Pengeluaran Rumah Tangga Non Pangan', 'url'=>array('pengeluaran_non_pangan/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),
 		));?>
 	</div>
-	<div class="span6">
+</div>
+
+<div class="row-fluid">
+	<div class="span6 alert alert-danger">
+		<h3 class="fa fa-building"><strong> Keterangan Sosial Ekonomi</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Sosial Ekonomi Lainnya',
+			   	'label'=>'',
 			   	'items'=>array(
 							array('label'=>'<i class="icon icon-list"></i> Keterangan Sosial Ekonomi Lainnya', 'url'=>array('index')),
 			   		),
@@ -129,16 +155,15 @@ $this->menu=array(
 			 ),
 		));?>
 	</div>
-</div>
-<div class="row-fluid">
-	<div class="span6">
+	<div class="span6 alert alert-danger">
+		<h3 class="fa fa-fax"><strong> Keterangan Luas Lahan Pertanian</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Luas Lahan Pertanian',
+			   	'label'=>'',
 			   	'items'=>array(
 							array('label'=>'<i class="icon icon-list"></i> Keterangan Luas Lahan Pertanian', 'url'=>array('index')),
 			   		),
@@ -146,16 +171,24 @@ $this->menu=array(
 			 ),
 		));?>
 	</div>
-	<div class="span6">
+</div>
+
+
+<div class="row-fluid">
+	<div class="span12 alert alert-danger">
+		<h3 class="fa fa-building"><strong> Keterangan Perumahan Hasil Survey</strong></h3>
 		<?php 
 			 $this->widget('zii.widgets.CMenu', array(
 			 /*'type'=>'list',*/
 			 'encodeLabel'=>false,
 			 'items'=>array(
 			   array(
-			   	'label'=>'Keterangan Sosial Ekonomi Lainnya',
+			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Sosial Ekonomi Lainnya', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Perumahan', 'url'=>array('pengeluaran_pangan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Sanitasi dan Penerangan', 'url'=>array('pengeluaran_non_pangan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Kebersihan (untuk bagian ini, lakukan pengamatan)', 'url'=>array('pengeluaran_pangan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Informasi Tambahan (lakukan pengamatan)', 'url'=>array('pengeluaran_non_pangan/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),

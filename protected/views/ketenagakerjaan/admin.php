@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'<i class="icon icon-list"></i> Data ArtPerorangan', 'url'=>array('index', 'id' => $id)),
-	array('label'=>'<i class="icon icon-adjust"></i> Create ArtPerorangan', 'url'=>array('create', 'id' => $id)),
+	array('label'=>'<i class="icon icon-list"></i> Data Ketenagakerjaan', 'url'=>array('index', 'id' => $id)),
+	array('label'=>'<i class="icon icon-adjust"></i> Create Ketenagakerjaan', 'url'=>array('create', 'id' => $id)),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h3>Data Art Perorangan</h3>
+<h3>Data Art Perorangan - Ketenagakerjaan</h3>
 
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(

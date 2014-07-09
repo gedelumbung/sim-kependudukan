@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'<i class="icon icon-adjust"></i> Create ArtPerorangan', 'url'=>array('create')),
-	array('label'=>'<i class="icon icon-list"></i> Manage ArtPerorangan', 'url'=>array('admin')),
+	array('label'=>'<i class="icon icon-adjust"></i> Create Ketenagakerjaan', 'url'=>array('create')),
+	array('label'=>'<i class="icon icon-list"></i> Manage Ketenagakerjaan', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Art Perorangan</h1>
+<h1>Art Perorangan - Ketenagakerjaan</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -7590,3 +7590,1371 @@ REQUEST_URI=/sim-bappeda/ketenagakerjaan/update/1
 in /var/www/sim-bappeda/protected/views/ketenagakerjaan/_form.php (32)
 in /var/www/sim-bappeda/protected/views/ketenagakerjaan/update.php (21)
 in /var/www/sim-bappeda/protected/controllers/KetenagakerjaanController.php (104)
+2014/07/05 15:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "kb/index".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('kb/index')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/kb/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/05 15:14:37 [error] [php] Missing argument 1 for ArtPerorangan::search(), called in /var/www/sim-bappeda/protected/views/kb/admin.php on line 47 and defined (/var/www/sim-bappeda/protected/models/ArtPerorangan.php:240)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): KbController->renderInternal()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#3 /var/www/sim-bappeda/protected/controllers/KbController.php(132): KbController->render()
+#4 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(49): KbController->actionIndex()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#7 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#10 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/index/2
+in /var/www/sim-bappeda/protected/models/ArtPerorangan.php (240)
+in /var/www/sim-bappeda/protected/views/kb/admin.php (47)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (132)
+2014/07/05 15:15:40 [error] [php] Missing argument 1 for ArtPerorangan::search(), called in /var/www/sim-bappeda/protected/views/kb/admin.php on line 47 and defined (/var/www/sim-bappeda/protected/models/ArtPerorangan.php:240)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): KbController->renderInternal()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#3 /var/www/sim-bappeda/protected/controllers/KbController.php(132): KbController->render()
+#4 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(49): KbController->actionIndex()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#7 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#10 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/index/2
+in /var/www/sim-bappeda/protected/models/ArtPerorangan.php (240)
+in /var/www/sim-bappeda/protected/views/kb/admin.php (47)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (132)
+2014/07/05 15:16:14 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/admin.php:35)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/KbController.php(132): KbController->render()
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(49): KbController->actionIndex()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/index/2
+in /var/www/sim-bappeda/protected/views/kb/admin.php (35)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (132)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/05 15:16:42 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/admin.php:35)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/KbController.php(132): KbController->render()
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(49): KbController->actionIndex()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/index/2
+in /var/www/sim-bappeda/protected/views/kb/admin.php (35)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (132)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/05 15:52:59 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/_form.php:39)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/kb/create.php(18): KbController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): KbController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/KbController.php(80): KbController->render()
+#7 unknown(0): KbController->actionCreate()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/create/2
+in /var/www/sim-bappeda/protected/views/kb/_form.php (39)
+in /var/www/sim-bappeda/protected/views/kb/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (80)
+2014/07/05 15:53:16 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/_form.php:39)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/kb/create.php(18): KbController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): KbController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/KbController.php(80): KbController->render()
+#7 unknown(0): KbController->actionCreate()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/create/2
+in /var/www/sim-bappeda/protected/views/kb/_form.php (39)
+in /var/www/sim-bappeda/protected/views/kb/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (80)
+2014/07/05 15:53:17 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/_form.php:39)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/kb/create.php(18): KbController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): KbController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/KbController.php(80): KbController->render()
+#7 unknown(0): KbController->actionCreate()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/create/2
+in /var/www/sim-bappeda/protected/views/kb/_form.php (39)
+in /var/www/sim-bappeda/protected/views/kb/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (80)
+2014/07/05 15:53:33 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/_form.php:39)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/kb/create.php(18): KbController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): KbController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/KbController.php(80): KbController->render()
+#7 unknown(0): KbController->actionCreate()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/create/2
+in /var/www/sim-bappeda/protected/views/kb/_form.php (39)
+in /var/www/sim-bappeda/protected/views/kb/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (80)
+2014/07/05 16:13:09 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/admin.php:11)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/KbController.php(149): KbController->render()
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(49): KbController->actionAdmin()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/admin/2
+in /var/www/sim-bappeda/protected/views/kb/admin.php (11)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (149)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/05 16:13:53 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/admin.php:11)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/KbController.php(149): KbController->render()
+#3 unknown(0): KbController->actionAdmin()
+#4 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#15 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/admin/2
+in /var/www/sim-bappeda/protected/views/kb/admin.php (11)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (149)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/05 16:13:54 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/kb/admin.php:11)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): KbController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): KbController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/KbController.php(149): KbController->render()
+#3 unknown(0): KbController->actionAdmin()
+#4 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): KbController->runAction()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): KbController->filterAccessControl()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): KbController->runActionWithFilters()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): KbController->run()
+#15 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/kb/admin/2
+in /var/www/sim-bappeda/protected/views/kb/admin.php (11)
+in /var/www/sim-bappeda/protected/controllers/KbController.php (149)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/05 17:08:19 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/controllers/PerumahanController.php:127)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): PerumahanController->runAction()
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): PerumahanController->filterAccessControl()
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): PerumahanController->runActionWithFilters()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): PerumahanController->run()
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+in /var/www/sim-bappeda/protected/controllers/PerumahanController.php (127)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/06 05:36:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/sim-bappeda/yii-core/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#9 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#10 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:39:10 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/perumahan/_form.php:29)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): PerumahanController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/perumahan/create.php(17): PerumahanController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): PerumahanController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): PerumahanController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): PerumahanController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(144): PerumahanController->render()
+#7 unknown(0): PerumahanController->actionIndex()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): PerumahanController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): PerumahanController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): PerumahanController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): PerumahanController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+in /var/www/sim-bappeda/protected/views/perumahan/_form.php (29)
+in /var/www/sim-bappeda/protected/views/perumahan/create.php (17)
+in /var/www/sim-bappeda/protected/controllers/PerumahanController.php (144)
+2014/07/06 05:49:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(148): PerumahanController->loadModel('2')
+#1 [internal function]: PerumahanController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:50:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(148): PerumahanController->loadModel('2')
+#1 [internal function]: PerumahanController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:50:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(148): PerumahanController->loadModel('2')
+#1 [internal function]: PerumahanController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(148): PerumahanController->loadModel('2')
+#1 [internal function]: PerumahanController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:50:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(148): PerumahanController->loadModel('2')
+#1 [internal function]: PerumahanController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:51:15 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/perumahan/_form.php:35)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): PerumahanController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/perumahan/update.php(21): PerumahanController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): PerumahanController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): PerumahanController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): PerumahanController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(160): PerumahanController->render()
+#7 unknown(0): PerumahanController->actionIndex()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): PerumahanController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): PerumahanController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): PerumahanController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): PerumahanController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/perumahan/index/2
+in /var/www/sim-bappeda/protected/views/perumahan/_form.php (35)
+in /var/www/sim-bappeda/protected/views/perumahan/update.php (21)
+in /var/www/sim-bappeda/protected/controllers/PerumahanController.php (160)
+2014/07/06 05:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:194
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(55): PerumahanController->loadModel('1')
+#1 [internal function]: PerumahanController->actionView('1')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/view')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/1
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:51:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:194
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(55): PerumahanController->loadModel('1')
+#1 [internal function]: PerumahanController->actionView('1')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/view')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/1
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:53:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/PerumahanController.php:194
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/PerumahanController.php(55): PerumahanController->loadModel('1')
+#1 [internal function]: PerumahanController->actionView('1')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PerumahanController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PerumahanController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/view')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/perumahan/1
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:57:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/sim-bappeda/yii-core/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#9 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#10 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 05:57:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/sim-bappeda/yii-core/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#9 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('perumahan/index')
+#10 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sim-bappeda/perumahan/index
+HTTP_REFERER=http://freelance.dev/sim-bappeda/perumahan/index/2
+---
+2014/07/06 10:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tik/index".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('tik/index')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/tik/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/06 10:56:35 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/controllers/TikController.php:127)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): TikController->runAction()
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): TikController->filterAccessControl()
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): TikController->runActionWithFilters()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): TikController->run()
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/tik/index/2
+in /var/www/sim-bappeda/protected/controllers/TikController.php (127)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/06 11:53:06 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/tik/_form.php:29)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): TikController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/tik/create.php(18): TikController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): TikController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): TikController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): TikController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/TikController.php(144): TikController->render()
+#7 unknown(0): TikController->actionIndex()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): TikController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): TikController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): TikController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): TikController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/tik/index/2
+in /var/www/sim-bappeda/protected/views/tik/_form.php (29)
+in /var/www/sim-bappeda/protected/views/tik/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/TikController.php (144)
+2014/07/06 16:36:30 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/tik/_form.php:35)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): TikController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/tik/update.php(21): TikController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): TikController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): TikController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): TikController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/TikController.php(160): TikController->render()
+#7 unknown(0): TikController->actionIndex()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): TikController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): TikController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): TikController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): TikController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/tik/index/2
+in /var/www/sim-bappeda/protected/views/tik/_form.php (35)
+in /var/www/sim-bappeda/protected/views/tik/update.php (21)
+in /var/www/sim-bappeda/protected/controllers/TikController.php (160)
+2014/07/06 18:22:07 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php:127)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_panganController->runAction()
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_panganController->filterAccessControl()
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_panganController->runActionWithFilters()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_panganController->run()
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_pangan/index/2
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php (127)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/06 18:22:15 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/pengeluaran_pangan/_form.php:29)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_panganController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/pengeluaran_pangan/create.php(18): Pengeluaran_panganController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): Pengeluaran_panganController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_panganController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): Pengeluaran_panganController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php(144): Pengeluaran_panganController->render()
+#7 unknown(0): Pengeluaran_panganController->actionIndex()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_panganController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_panganController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_panganController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_panganController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_pangan/index/2
+in /var/www/sim-bappeda/protected/views/pengeluaran_pangan/_form.php (29)
+in /var/www/sim-bappeda/protected/views/pengeluaran_pangan/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php (144)
+2014/07/08 16:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 16:24:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 16:24:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 16:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 16:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+---
+2014/07/08 16:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 16:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+---
+2014/07/08 16:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 16:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/abound/css/font-awesome/font-awesome.min.css".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/abound/c...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+HTTP_REFERER=http://freelance.dev/sim-bappeda/themes/abound/css/font-awesome/font-awesome.min.css
+---
+2014/07/08 16:34:24 [error] [php] Undefined index: label (/var/www/sim-bappeda/yii-core/framework/zii/widgets/CMenu.php:251)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/zii/widgets/CMenu.php(167): CMenu->renderMenu()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(173): CMenu->run()
+#2 /var/www/sim-bappeda/protected/views/rumah_tangga/view.php(46): Rumah_tanggaController->widget()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): Rumah_tanggaController->renderInternal()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Rumah_tanggaController->renderFile()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): Rumah_tanggaController->renderPartial()
+#7 /var/www/sim-bappeda/protected/controllers/Rumah_tanggaController.php(57): Rumah_tanggaController->render()
+#8 unknown(0): Rumah_tanggaController->actionView()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#10 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Rumah_tanggaController->runAction()
+#13 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Rumah_tanggaController->filterAccessControl()
+#16 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Rumah_tanggaController->runActionWithFilters()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Rumah_tanggaController->run()
+#20 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/rumah_tangga/2
+in /var/www/sim-bappeda/protected/views/rumah_tangga/view.php (46)
+in /var/www/sim-bappeda/protected/controllers/Rumah_tanggaController.php (57)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/08 16:54:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/sim-bappeda/yii-core/framework/web/CController.php:1118
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('delete')
+#9 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('provinsi/delete')
+#10 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sim-bappeda/provinsi/delete/1
+HTTP_REFERER=http://freelance.dev/sim-bappeda/provinsi
+---
+2014/07/08 19:19:49 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /var/www/sim-bappeda/yii-core/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /var/www/sim-bappeda/protected/views/pengeluaran_pangan/view.php(55): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require('/var/www/sim-ba...')
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/sim-ba...', Array, true)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): CBaseController->renderFile('/var/www/sim-ba...', Array, true)
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php(56): CController->render('view', Array)
+#7 [internal function]: Pengeluaran_panganController->actionView('2')
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_panganController), Array)
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_panganController), Object(ReflectionMethod), Array)
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_pan...')
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_pangan/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/pengeluaran_pangan/index/2
+---
+2014/07/08 19:21:26 [error] [php] Object of class PengeluaranPangan could not be converted to string (/var/www/sim-bappeda/protected/views/pengeluaran_pangan/view.php:29)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_panganController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): Pengeluaran_panganController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php(56): Pengeluaran_panganController->render()
+#3 unknown(0): Pengeluaran_panganController->actionView()
+#4 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_panganController->runAction()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_panganController->filterAccessControl()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_panganController->runActionWithFilters()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_panganController->run()
+#15 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_pangan/2
+in /var/www/sim-bappeda/protected/views/pengeluaran_pangan/view.php (29)
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php (56)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/08 19:21:42 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /var/www/sim-bappeda/yii-core/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /var/www/sim-bappeda/protected/views/pengeluaran_pangan/view.php(55): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require('/var/www/sim-ba...')
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/sim-ba...', Array, true)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): CBaseController->renderFile('/var/www/sim-ba...', Array, true)
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /var/www/sim-bappeda/protected/controllers/Pengeluaran_panganController.php(56): CController->render('view', Array)
+#7 [internal function]: Pengeluaran_panganController->actionView('2')
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_panganController), Array)
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_panganController), Object(ReflectionMethod), Array)
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_pan...')
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_pangan/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/pengeluaran_pangan/index/2
+---
+2014/07/08 19:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pengeluaran_non_pangan/index".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/08 19:45:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pengeluaran_non_pangan/index".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 08:27:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pengeluaran_non_pangan/index".' in /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#1 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 08:30:49 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:127)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_non_panganController->runAction()
+#1 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_non_panganController->filterAccessControl()
+#4 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_non_panganController->runActionWithFilters()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_non_panganController->run()
+#8 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php (127)
+in /var/www/sim-bappeda/index.php (13)
+2014/07/09 08:48:21 [error] [php] Missing argument 2 for CActiveForm::labelEx(), called in /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php on line 167 and defined (/var/www/sim-bappeda/yii-core/framework/web/widgets/CActiveForm.php:595)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): Pengeluaran_non_panganController->renderInternal()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_non_panganController->renderFile()
+#2 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/create.php(18): Pengeluaran_non_panganController->renderPartial()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): Pengeluaran_non_panganController->renderInternal()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_non_panganController->renderFile()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): Pengeluaran_non_panganController->renderPartial()
+#7 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(144): Pengeluaran_non_panganController->render()
+#8 unknown(0): Pengeluaran_non_panganController->actionIndex()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#10 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_non_panganController->runAction()
+#13 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_non_panganController->filterAccessControl()
+#16 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_non_panganController->runActionWithFilters()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_non_panganController->run()
+#20 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+in /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php (167)
+in /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/create.php (18)
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php (144)
+2014/07/09 08:48:54 [error] [exception.CException] exception 'CException' with message 'Property "PengeluaranNonMakanan.dd" is not defined.' in /var/www/sim-bappeda/yii-core/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/db/ar/CActiveRecord.php(145): CComponent->__get('dd')
+#1 /var/www/sim-bappeda/yii-core/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('dd')
+#2 /var/www/sim-bappeda/yii-core/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(PengeluaranNonMakanan), 'dd')
+#3 /var/www/sim-bappeda/yii-core/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(PengeluaranNonMakanan), 'dd', Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(PengeluaranNonMakanan), 'dd', Array)
+#5 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php(167): CActiveForm->textField(Object(PengeluaranNonMakanan), 'dd', Array)
+#6 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require('/var/www/sim-ba...')
+#7 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/sim-ba...', Array, true)
+#8 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): CBaseController->renderFile('/var/www/sim-ba...', Array, true)
+#9 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/create.php(18): CController->renderPartial('_form', Array)
+#10 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require('/var/www/sim-ba...')
+#11 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/sim-ba...', Array, true)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): CBaseController->renderFile('/var/www/sim-ba...', Array, true)
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(144): CController->render('create', Array)
+#15 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#16 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#17 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#18 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#28 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:45:58 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textareaField".' in /var/www/sim-bappeda/yii-core/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php(263): CComponent->__call('textareaField', Array)
+#1 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php(263): CActiveForm->textareaField(Object(PengeluaranNonMakanan), 'sumber_penghasi...', Array)
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require('/var/www/sim-ba...')
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/sim-ba...', Array, true)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): CBaseController->renderFile('/var/www/sim-ba...', Array, true)
+#5 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/create.php(18): CController->renderPartial('_form', Array)
+#6 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require('/var/www/sim-ba...')
+#7 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/sim-ba...', Array, true)
+#8 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): CBaseController->renderFile('/var/www/sim-ba...', Array, true)
+#9 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(144): CController->render('create', Array)
+#11 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#12 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#13 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#14 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#23 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#24 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php:190
+Stack trace:
+#0 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(148): Pengeluaran_non_panganController->loadModel('2')
+#1 [internal function]: Pengeluaran_non_panganController->actionIndex('2')
+#2 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(Pengeluaran_non_panganController), Array)
+#3 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(Pengeluaran_non_panganController), Object(ReflectionMethod), Array)
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController('pengeluaran_non...')
+#14 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/sim-bappeda/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+HTTP_REFERER=http://freelance.dev/sim-bappeda/rumah_tangga/2
+---
+2014/07/09 09:49:46 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php:31)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_non_panganController->renderFile()
+#1 /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/update.php(21): Pengeluaran_non_panganController->renderPartial()
+#2 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(126): require()
+#3 /var/www/sim-bappeda/yii-core/framework/web/CBaseController.php(95): Pengeluaran_non_panganController->renderInternal()
+#4 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_non_panganController->renderFile()
+#5 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): Pengeluaran_non_panganController->renderPartial()
+#6 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(160): Pengeluaran_non_panganController->render()
+#7 unknown(0): Pengeluaran_non_panganController->actionIndex()
+#8 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_non_panganController->runAction()
+#12 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_non_panganController->filterAccessControl()
+#15 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_non_panganController->runActionWithFilters()
+#18 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_non_panganController->run()
+#19 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/index/2
+in /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/_form.php (31)
+in /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/update.php (21)
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php (160)
+2014/07/09 09:53:23 [error] [php] Undefined variable: id (/var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/view.php:12)
+Stack trace:
+#0 /var/www/sim-bappeda/yii-core/framework/web/CController.php(869): Pengeluaran_non_panganController->renderFile()
+#1 /var/www/sim-bappeda/yii-core/framework/web/CController.php(782): Pengeluaran_non_panganController->renderPartial()
+#2 /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php(56): Pengeluaran_non_panganController->render()
+#3 unknown(0): Pengeluaran_non_panganController->actionView()
+#4 /var/www/sim-bappeda/yii-core/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/sim-bappeda/yii-core/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/sim-bappeda/yii-core/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(133): Pengeluaran_non_panganController->runAction()
+#8 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/sim-bappeda/yii-core/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/sim-bappeda/yii-core/framework/web/filters/CInlineFilter.php(58): Pengeluaran_non_panganController->filterAccessControl()
+#11 /var/www/sim-bappeda/yii-core/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/sim-bappeda/yii-core/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/sim-bappeda/yii-core/framework/web/CController.php(265): Pengeluaran_non_panganController->runActionWithFilters()
+#14 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(282): Pengeluaran_non_panganController->run()
+#15 /var/www/sim-bappeda/yii-core/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/sim-bappeda/yii-core/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/sim-bappeda/index.php(13): CWebApplication->run()
+REQUEST_URI=/sim-bappeda/pengeluaran_non_pangan/2
+in /var/www/sim-bappeda/protected/views/pengeluaran_non_pangan/view.php (12)
+in /var/www/sim-bappeda/protected/controllers/Pengeluaran_non_panganController.php (56)
+in /var/www/sim-bappeda/index.php (13)
