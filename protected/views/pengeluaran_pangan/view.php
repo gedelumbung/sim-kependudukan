@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h3>View PengeluaranPangan #<?php echo $model->id_pengeluaran_rt; ?></h3>
+<h3>View Pengeluaran Pangan #<?php echo $model->id_pengeluaran_rt; ?></h3>
 
 <div class="portlet">
 <div class="portlet-decoration">

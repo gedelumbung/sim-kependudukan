@@ -25,8 +25,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id_pengeluaran_non_makanan',
-		'id_rt',
+		'RumahTangga.nama_krt',
 		'sewa_rumah',
 		'sewa_rumah_setahun',
 		'pemeliharaan_rumah',

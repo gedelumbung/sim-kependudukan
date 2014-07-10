@@ -149,7 +149,7 @@ $this->menu=array(
 			   array(
 			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Sosial Ekonomi Lainnya', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Sosial Ekonomi Lainnya', 'url'=>array('sosial_ekonomi/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),
@@ -165,7 +165,7 @@ $this->menu=array(
 			   array(
 			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Keterangan Luas Lahan Pertanian', 'url'=>array('index')),
+							array('label'=>'<i class="icon icon-list"></i> Keterangan Luas Lahan Pertanian', 'url'=>array('lahan_pertanian/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),
@@ -185,10 +185,10 @@ $this->menu=array(
 			   array(
 			   	'label'=>'',
 			   	'items'=>array(
-							array('label'=>'<i class="icon icon-list"></i> Perumahan', 'url'=>array('pengeluaran_pangan/index', 'id'=>$id)),
-							array('label'=>'<i class="icon icon-list"></i> Sanitasi dan Penerangan', 'url'=>array('pengeluaran_non_pangan/index', 'id'=>$id)),
-							array('label'=>'<i class="icon icon-list"></i> Kebersihan (untuk bagian ini, lakukan pengamatan)', 'url'=>array('pengeluaran_pangan/index', 'id'=>$id)),
-							array('label'=>'<i class="icon icon-list"></i> Informasi Tambahan (lakukan pengamatan)', 'url'=>array('pengeluaran_non_pangan/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Perumahan', 'url'=>array('perumahan_survey/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Sanitasi dan Penerangan', 'url'=>array('sanitasi_survey/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Kebersihan (untuk bagian ini, lakukan pengamatan)', 'url'=>array('kebersihan_survey/index', 'id'=>$id)),
+							array('label'=>'<i class="icon icon-list"></i> Informasi Tambahan (lakukan pengamatan)', 'url'=>array('info_tambahan_survey/index', 'id'=>$id)),
 			   		),
 			   	),
 			 ),
