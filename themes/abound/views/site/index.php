@@ -14,266 +14,329 @@ $gridDataProvider = new CArrayDataProvider(array(
 ));
 ?>
 
-<div class="row-fluid">
-  <div class="span3 ">
-	<div class="stat-block">
-	  <ul>
-		<li class="stat-graph inlinebar" id="weekly-visit">8,4,6,5,9,10</li>
-		<li class="stat-count"><span>$23,000</span><span>Weekly Sales</span></li>
-		<li class="stat-percent"><span class="text-success stat-percent">20%</span></li>
-	  </ul>
-	</div>
-  </div>
-  <div class="span3 ">
-	<div class="stat-block">
-	  <ul>
-		<li class="stat-graph inlinebar" id="new-visits">2,4,9,1,5,7,6</li>
-		<li class="stat-count"><span>$123,780</span><span>Monthly Sales</span></li>
-		<li class="stat-percent"><span class="text-error stat-percent">-15%</span></li>
-	  </ul>
-	</div>
-  </div>
-  <div class="span3 ">
-	<div class="stat-block">
-	  <ul>
-		<li class="stat-graph inlinebar" id="unique-visits">200,300,500,200,300,500,1000</li>
-		<li class="stat-count"><span>$12,456</span><span>Open Invoices</span></li>
-		<li class="stat-percent"><span class="text-success stat-percent">10%</span></li>
-	  </ul>
-	</div>
-  </div>
-  <div class="span3 ">
-	<div class="stat-block">
-	  <ul>
-		<li class="stat-graph inlinebar" id="">1000,3000,6000,8000,3000,8000,10000</li>
-		<li class="stat-count"><span>$25,000</span><span>Overdue</span></li>
-		<li class="stat-percent"><span><span class="text-success stat-percent">20%</span></li>
-	  </ul>
-	</div>
-  </div>
-</div>
+<style type="text/css">
+.nav-list>li>a, .nav-list .nav-header {
+    margin: 0px 10px;
+}
+</style>
 
-<div class="row-fluid">
+<script type="text/javascript">
+$(function()
+{
+    $('#wrapper') .css({'height': (($(window).height()) - 300)+'px'});
+
+    $(window).resize(function(){
+        $('#wrapper') .css({'height': (($(window).height()) - 300)+'px'});
+    });
+});
+</script>
+
+
+<div class="row-fluid" id="wrapper" style="position: relative;">
+<div class="span3" id="sidebar" style="height:100%; position:relative;">
+        <ul class="nav-list">  
+            <li class="nav-header">1. Data Wilayah</li>
+            <?php
+                $provinsi = new Provinsi();
+                $no_prov = 1;
+                foreach($provinsi->findAll() as $prov)
+                {
+                    ?>
+                        <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/<?php echo $prov->id_provinsi; ?>"><span class="number"></span><?php echo $no_prov; ?><span class="text"><?php echo $prov->provinsi; ?></span></a>
+                            <ul>
+                                <?php
+                                    $criteria_kab = new CDbCriteria;  
+                                    $criteria_kab->condition ='id_provinsi = "'.$prov->id_provinsi.'" ';
+                                    $kabupaten = Kabupaten::model()->findAll($criteria_kab);
+                                    foreach($kabupaten as $kab)
+                                    {
+                                        ?>
+                                            <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/<?php echo $kab->id_kabupaten; ?>"><span class="text"><i class="fa fa-database"></i> <?php echo $kab->kabupaten; ?></span></a>
+                                                <ul>
+                                                    <?php
+                                                        $criteria_kec= new CDbCriteria;  
+                                                        $criteria_kec->condition ='id_kabupaten = "'.$kab->id_kabupaten.'" ';
+                                                        $kecamatan = Kecamatan::model()->findAll($criteria_kec);
+                                                        foreach($kecamatan as $kec)
+                                                        {
+                                                            ?>
+                                                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/<?php echo $kec->id_kecamatan; ?>"><span class="text"><i class="fa fa-database"></i> <?php echo $kec->kecamatan; ?></span></a>
+
+                                                                <ul>
+                                                                    <?php
+                                                                        $criteria_des= new CDbCriteria;  
+                                                                        $criteria_des->condition ='id_kecamatan = "'.$kec->id_kecamatan.'" ';
+                                                                        $desa = DesaKelurahan::model()->findAll($criteria_des);
+                                                                        foreach($desa as $des)
+                                                                        {
+                                                                            ?>
+                                                                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_desa/<?php echo $des->id_desa_kelurahan; ?>"><span class="text"><i class="fa fa-database"></i> <?php echo $des->desa_kelurahan; ?></span></a>
+
+                                                                                
+
+                                                                                </li>
+                                                                            <?php
+                                                                        }
+                                                                    ?>
+                                                                </ul>
+
+                                                                </li>
+                                                            <?php
+                                                        }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        <?php
+                                    }
+                                ?>
+                            </ul>
+                        </li>
+                    <?php
+                     $no_prov++;
+                }
+            ?>
+        </ul>
+</div>
+<div class="center span9" id="contentpane" style="height:100%; position: relative;">
+    
+    <div>
+        <table class="data">
+            <caption>DIY</caption>
+            <thead>
+            <tr>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Kelompok Data</th>
+                <th rowspan="2">Jenis Data</th>
+                <th colspan="5">Tahun</th>
+                <th rowspan="2">Satuan</th>
+                <th rowspan="2">Sumber</th>
+                <th rowspan="2">Grafik</th>
+            </tr>
+            <tr>
+                <th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th>        
+            </tr>
+            </thead>
+            <tbody>   
+            <tr>
+                <td align="center"><b>1</b></td>
+                <td><b>Data Umum</b></td>
+                <td><b>1. Geografi</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                    <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td valign="top">1.&nbsp;Luas Wilayah</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;</td>
+                    <td style="text-align: left;"></td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/55/0/2/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">a.&nbsp;Daratan</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        3.185,8            </td>
+                                            <td style="text-align: right; color: black">
+                        3.185,8            </td>
+                                            <td style="text-align: right; color: black">
+                        3.185,8            </td>
+                                            <td style="text-align: right; color: black">
+                        3.185,8            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;Km2</td>
+                    <td style="text-align: left;">Badan Pusat Statistik</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/2206/0/109/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">b.&nbsp;Laut 12 mil</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        2.511,31            </td>
+                                            <td style="text-align: right; color: black">
+                        2.511,31            </td>
+                                            <td style="text-align: right; color: black">
+                        2.511,31            </td>
+                                            <td style="text-align: right; color: black">
+                        2.511,31            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;Km2</td>
+                    <td style="text-align: left;">......</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/167/0/112/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td valign="top">2.&nbsp;Topografi</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/59/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">a.&nbsp;Luas Kemiringan Lahan (rata-rata)</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/60/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top"><table cellspacing="0" cellpadding="0" border="0" valign="top"><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Luas Kemiringan Lahan (rata-rata)&nbsp;<span class="trebuchet"><i>(dalam&nbsp;Persen)</i></span>&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        &nbsp;            </td>
+                                            <td style="text-align: right; color: black">
+                        &nbsp;            </td>
+                                            <td style="text-align: right; color: black">
+                        &nbsp;            </td>
+                                            <td style="text-align: right; color: black">
+                        &nbsp;            </td>
+                                            <td style="text-align: right; color: black">
+                        &nbsp;            </td>
+                                <td style="text-align: center;">%</td>
+                    <td style="text-align: center;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/60/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>       
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">1).&nbsp;Datar (0-2 %)</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        90.933,83            </td>
+                                            <td style="text-align: right; color: black">
+                        90.933,83            </td>
+                                            <td style="text-align: right; color: black">
+                        90.933,83            </td>
+                                            <td style="text-align: right; color: black">
+                        90.933,83            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;Ha</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/61/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">2).&nbsp;Bergelombang (3-15 %)</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        33.322,91            </td>
+                                            <td style="text-align: right; color: black">
+                        33.322,91            </td>
+                                            <td style="text-align: right; color: black">
+                        33.322,91            </td>
+                                            <td style="text-align: right; color: black">
+                        33.322,91            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;Ha</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/62/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">3).&nbsp;Curam (16-40 %)</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        30.228,3            </td>
+                                            <td style="text-align: right; color: black">
+                        30.228,3            </td>
+                                            <td style="text-align: right; color: black">
+                        30.228,3            </td>
+                                            <td style="text-align: right; color: black">
+                        30.228,3            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;Ha</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/63/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">4).&nbsp;Sangat Curam (&gt;40 %)</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                        16.045,12            </td>
+                                            <td style="text-align: right; color: black">
+                        16.045,12            </td>
+                                            <td style="text-align: right; color: black">
+                        16.045,12            </td>
+                                            <td style="text-align: right; color: black">
+                        16.045,12            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;Ha</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/64/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                        <tr>
+                    <td></td>
+                    <td></td>
+                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">b.&nbsp;Ketinggian Diatas Permukaan Laut (rata-rata)</td></tr></tbody></table></td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                            <td style="text-align: right; color: n/a">
+                        n/a            </td>
+                                            <td style="text-align: right; color: black">
+                                    </td>
+                                <td style="text-align: center;">&nbsp;m</td>
+                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
+                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/65/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
+                </tr>
+                    
+            </tbody>
+        </table>
+    </div>
 
     
-	<div class="span9">
-      <?php
-		$this->beginWidget('zii.widgets.CPortlet', array(
-			'title'=>'<span class="icon-picture"></span>Operations Chart',
-			'titleCssClass'=>''
-		));
-		?>
-        
-        <div class="auto-update-chart" style="height: 250px;width:100%;margin-top:15px; margin-bottom:15px;"></div>
-        
-        <?php $this->endWidget(); ?>
-        
-	</div>
-	<div class="span3">
-		<div class="summary">
-          <ul>
-          	<li>
-          		<span class="summary-icon">
-                	<img src="<?php echo $baseUrl ;?>/img/credit.png" width="36" height="36" alt="Monthly Income">
-                </span>
-                <span class="summary-number">$78,245</span>
-                <span class="summary-title"> Monthly Income</span>
-            </li>
-            <li>
-            	<span class="summary-icon">
-                	<img src="<?php echo $baseUrl ;?>/img/page_white_edit.png" width="36" height="36" alt="Open Invoices">
-                </span>
-                <span class="summary-number">125</span>
-                <span class="summary-title"> Open Invoices</span>
-            </li>
-            <li>
-            	<span class="summary-icon">
-                	<img src="<?php echo $baseUrl ;?>/img/page_white_excel.png" width="36" height="36" alt="Open Quotes<">
-                </span>
-                <span class="summary-number">53</span>
-                <span class="summary-title"> Open Quotes</span>
-            </li>
-            <li>
-            	<span class="summary-icon">
-                	<img src="<?php echo $baseUrl ;?>/img/group.png" width="36" height="36" alt="Active Members">
-                </span>
-                <span class="summary-number">654,321</span>
-                <span class="summary-title"> Active Members</span>
-            </li>
-            <li>
-            	<span class="summary-icon">
-                	<img src="<?php echo $baseUrl ;?>/img/folder_page.png" width="36" height="36" alt="Recent Conversions">
-                </span>
-                <span class="summary-number">630</span>
-                <span class="summary-title"> Recent Conversions</span></li>
-        
-          </ul>
-        </div>
-
-	</div>
+    
 </div>
 
-
-<div class="row-fluid">
-	<div class="span6">
-	  <?php $this->widget('zii.widgets.grid.CGridView', array(
-			/*'type'=>'striped bordered condensed',*/
-			'htmlOptions'=>array('class'=>'table table-striped table-bordered table-condensed'),
-			'dataProvider'=>$gridDataProvider,
-			'template'=>"{items}",
-			'columns'=>array(
-				array('name'=>'id', 'header'=>'#'),
-				array('name'=>'firstName', 'header'=>'First name'),
-				array('name'=>'lastName', 'header'=>'Last name'),
-				array('name'=>'language', 'header'=>'Language'),
-				array('name'=>'usage', 'header'=>'Usage', 'type'=>'raw'),
-				
-			),
-		)); ?>
-	</div><!--/span-->
-	<div class="span6">
-		 <?php $this->widget('zii.widgets.grid.CGridView', array(
-			/*'type'=>'striped bordered condensed',*/
-			'htmlOptions'=>array('class'=>'table table-striped table-bordered table-condensed'),
-			'dataProvider'=>$gridDataProvider,
-			'template'=>"{items}",
-			'columns'=>array(
-				array('name'=>'id', 'header'=>'#'),
-				array('name'=>'firstName', 'header'=>'First name'),
-				array('name'=>'lastName', 'header'=>'Last name'),
-				array('name'=>'language', 'header'=>'Language'),
-				array('name'=>'usage', 'header'=>'Usage', 'type'=>'raw'),
-				
-			),
-		)); ?>
-        	
-	</div><!--/span-->
+    
+    
 </div><!--/row-->
-
-<div class="row-fluid">
-	<div class="span6">
-	  <?php
-		$this->beginWidget('zii.widgets.CPortlet', array(
-			'title'=>'<span class="icon-th-large"></span>Income Chart',
-			'titleCssClass'=>''
-		));
-		?>
-        
-        <div class="visitors-chart" style="height: 230px;width:100%;margin-top:15px; margin-bottom:15px;"></div>
-        
-        <?php $this->endWidget(); ?>
-	</div><!--/span-->
-    <div class="span6">
-    	<?php
-		$this->beginWidget('zii.widgets.CPortlet', array(
-			'title'=>'<span class="icon-th-list"></span> Visitors Chart',
-			'titleCssClass'=>''
-		));
-		?>
-        
-        <div class="pieStats" style="height: 230px;width:100%;margin-top:15px; margin-bottom:15px;"></div>
-        
-        <?php $this->endWidget(); ?>
-    </div>
-	<!--<div class="span2">
-    	<input class="knob" data-width="100" data-displayInput=false data-fgColor="#5EB95E" value="35">
-    </div>
-	<div class="span2">
-     	<input class="knob" data-width="100" data-cursor=true data-fgColor="#B94A48" data-thickness=.3 value="29">
-    </div>
-	<div class="span2">
-         <input class="knob" data-width="100" data-min="-100" data-fgColor="#F89406" data-displayPrevious=true value="44">     	
-	</div><!--/span-->
-</div><!--/row-->
-
-          
-
-
-<script>
-            $(function() {
-
-                $(".knob").knob({
-                    /*change : function (value) {
-                        //console.log("change : " + value);
-                    },
-                    release : function (value) {
-                        console.log("release : " + value);
-                    },
-                    cancel : function () {
-                        console.log("cancel : " + this.value);
-                    },*/
-                    draw : function () {
-
-                        // "tron" case
-                        if(this.$.data('skin') == 'tron') {
-
-                            var a = this.angle(this.cv)  // Angle
-                                , sa = this.startAngle          // Previous start angle
-                                , sat = this.startAngle         // Start angle
-                                , ea                            // Previous end angle
-                                , eat = sat + a                 // End angle
-                                , r = 1;
-
-                            this.g.lineWidth = this.lineWidth;
-
-                            this.o.cursor
-                                && (sat = eat - 0.3)
-                                && (eat = eat + 0.3);
-
-                            if (this.o.displayPrevious) {
-                                ea = this.startAngle + this.angle(this.v);
-                                this.o.cursor
-                                    && (sa = ea - 0.3)
-                                    && (ea = ea + 0.3);
-                                this.g.beginPath();
-                                this.g.strokeStyle = this.pColor;
-                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
-                                this.g.stroke();
-                            }
-
-                            this.g.beginPath();
-                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
-                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
-                            this.g.stroke();
-
-                            this.g.lineWidth = 2;
-                            this.g.beginPath();
-                            this.g.strokeStyle = this.o.fgColor;
-                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
-                            this.g.stroke();
-
-                            return false;
-                        }
-                    }
-                });
-
-                // Example of infinite knob, iPod click wheel
-                var v, up=0,down=0,i=0
-                    ,$idir = $("div.idir")
-                    ,$ival = $("div.ival")
-                    ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
-                    ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
-                $("input.infinite").knob(
-                                    {
-                                    min : 0
-                                    , max : 20
-                                    , stopper : false
-                                    , change : function () {
-                                                    if(v > this.cv){
-                                                        if(up){
-                                                            decr();
-                                                            up=0;
-                                                        }else{up=1;down=0;}
-                                                    } else {
-                                                        if(v < this.cv){
-                                                            if(down){
-                                                                incr();
-                                                                down=0;
-                                                            }else{down=1;up=0;}
-                                                        }
-                                                    }
-                                                    v = this.cv;
-                                                }
-                                    });
-            });
-        </script>

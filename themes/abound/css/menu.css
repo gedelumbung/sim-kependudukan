@@ -1,0 +1,88 @@
+#navigation{
+    background-color: #247cb6;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3498db), to(#247cb6));
+    background-image: -moz-linear-gradient(#3498db, #247cb6);
+    background-image: -o-linear-gradient(#3498db, #247cb6);
+    background-image: linear-gradient(#3498db, #247cb6);
+    border-bottom:1px solid rgba(0,0,0,0.2)!important;  
+    border-top:1px solid rgba(0,0,0,0.2);
+    box-shadow:inset 0px 1px 0px rgba(255,255,255,0.2);  
+    height:30px;
+}
+#navigation ul{
+    list-style:none;
+    margin:0;padding:0;
+}
+#navigation ul li{
+    float:left;
+    position:relative;
+    border-right:1px solid rgba(0,0,0,0.2);
+    border-left:1px solid rgba(255,255,255,0.2);
+}
+#navigation ul li a{
+    display:block;
+    padding:0 8px!important;
+    color:#fff;
+    font-size:11px;
+    border:none;
+    height:30px;
+    line-height:30px;
+}
+#navigation ul li a:hover,
+#navigation ul li a.hover,
+#navigation ul li a.active{
+    color:#fff;
+    background:rgba(0,0,0,0.5);
+}
+#navigation ul li a i{
+    margin-right:5px;
+}
+#navigation ul li.login a{
+}
+#navigation ul li ul{
+    position: absolute;
+    top:30px;
+    left:0px;
+    display:none;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.1);
+    -moz-box-shadow:0px 1px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.1);
+    background:#247cb6;
+}
+#navigation ul li ul li{
+    float:none;
+    display:block;
+}
+#navigation ul li ul li a{
+    border: none;
+    min-width:150px;
+    border-bottom:1px dotted #ccc;
+    white-space:nowrap;
+    padding-right:15px!important;
+}
+#navigation ul li ul li a:hover{
+    background: #186293;
+    color:#fff;
+}
+#navigation ul li ul li:last-child a{
+    border:none;
+}
+#navigation ul li a span.number{
+    display:inline-block;
+    background:#ff0000;
+    color:#fff;
+    position:absolute;
+    top:-10px;right:5px;
+    height:18px;line-height:18px;
+    width:18px;
+    text-align: center;
+    border:1px solid #fff;
+    border-radius:100%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    font-size:10px;
+    z-index:9999;
+    box-shadow:0px 2px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.3);
+}
