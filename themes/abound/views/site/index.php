@@ -1,37 +1,3 @@
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-$baseUrl = Yii::app()->theme->baseUrl; 
-?>
-<?php
-$gridDataProvider = new CArrayDataProvider(array(
-    array('id'=>1, 'firstName'=>'Mark', 'lastName'=>'Otto', 'language'=>'CSS','usage'=>'<span class="inlinebar">1,3,4,5,3,5</span>'),
-    array('id'=>2, 'firstName'=>'Jacob', 'lastName'=>'Thornton', 'language'=>'JavaScript','usage'=>'<span class="inlinebar">1,3,16,5,12,5</span>'),
-    array('id'=>3, 'firstName'=>'Stu', 'lastName'=>'Dent', 'language'=>'HTML','usage'=>'<span class="inlinebar">1,4,4,7,5,9,10</span>'),
-	array('id'=>4, 'firstName'=>'Jacob', 'lastName'=>'Thornton', 'language'=>'JavaScript','usage'=>'<span class="inlinebar">1,3,16,5,12,5</span>'),
-    array('id'=>5, 'firstName'=>'Stu', 'lastName'=>'Dent', 'language'=>'HTML','usage'=>'<span class="inlinebar">1,3,4,5,3,5</span>'),
-));
-?>
-
-<style type="text/css">
-.nav-list>li>a, .nav-list .nav-header {
-    margin: 0px 10px;
-}
-</style>
-
-<script type="text/javascript">
-$(function()
-{
-    $('#wrapper') .css({'height': (($(window).height()) - 300)+'px'});
-
-    $(window).resize(function(){
-        $('#wrapper') .css({'height': (($(window).height()) - 300)+'px'});
-    });
-});
-</script>
-
-
 <div class="row-fluid" id="wrapper" style="position: relative;">
 <div class="span3" id="sidebar" style="height:100%; position:relative;">
         <ul class="nav-list">  
@@ -109,7 +75,6 @@ $(function()
                 <th rowspan="2">Jenis Data</th>
                 <th colspan="5">Tahun</th>
                 <th rowspan="2">Satuan</th>
-                <th rowspan="2">Sumber</th>
                 <th rowspan="2">Grafik</th>
             </tr>
             <tr>
@@ -119,8 +84,7 @@ $(function()
             <tbody>   
             <tr>
                 <td align="center"><b>1</b></td>
-                <td><b>Data Umum</b></td>
-                <td><b>1. Geografi</b></td>
+                <td><b>Data Kependudukan</b></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -130,204 +94,306 @@ $(function()
                 <td></td>
                 <td></td>
             </tr>
-                    <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td valign="top">1.&nbsp;Luas Wilayah</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;</td>
-                    <td style="text-align: left;"></td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/55/0/2/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">a.&nbsp;Daratan</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        3.185,8            </td>
-                                            <td style="text-align: right; color: black">
-                        3.185,8            </td>
-                                            <td style="text-align: right; color: black">
-                        3.185,8            </td>
-                                            <td style="text-align: right; color: black">
-                        3.185,8            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;Km2</td>
-                    <td style="text-align: left;">Badan Pusat Statistik</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/2206/0/109/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">b.&nbsp;Laut 12 mil</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        2.511,31            </td>
-                                            <td style="text-align: right; color: black">
-                        2.511,31            </td>
-                                            <td style="text-align: right; color: black">
-                        2.511,31            </td>
-                                            <td style="text-align: right; color: black">
-                        2.511,31            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;Km2</td>
-                    <td style="text-align: left;">......</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/167/0/112/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td valign="top">2.&nbsp;Topografi</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/59/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">a.&nbsp;Luas Kemiringan Lahan (rata-rata)</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/60/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top"><table cellspacing="0" cellpadding="0" border="0" valign="top"><tbody><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Luas Kemiringan Lahan (rata-rata)&nbsp;<span class="trebuchet"><i>(dalam&nbsp;Persen)</i></span>&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        &nbsp;            </td>
-                                            <td style="text-align: right; color: black">
-                        &nbsp;            </td>
-                                            <td style="text-align: right; color: black">
-                        &nbsp;            </td>
-                                            <td style="text-align: right; color: black">
-                        &nbsp;            </td>
-                                            <td style="text-align: right; color: black">
-                        &nbsp;            </td>
-                                <td style="text-align: center;">%</td>
-                    <td style="text-align: center;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/60/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>       
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">1).&nbsp;Datar (0-2 %)</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        90.933,83            </td>
-                                            <td style="text-align: right; color: black">
-                        90.933,83            </td>
-                                            <td style="text-align: right; color: black">
-                        90.933,83            </td>
-                                            <td style="text-align: right; color: black">
-                        90.933,83            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;Ha</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/61/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">2).&nbsp;Bergelombang (3-15 %)</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        33.322,91            </td>
-                                            <td style="text-align: right; color: black">
-                        33.322,91            </td>
-                                            <td style="text-align: right; color: black">
-                        33.322,91            </td>
-                                            <td style="text-align: right; color: black">
-                        33.322,91            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;Ha</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/62/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">3).&nbsp;Curam (16-40 %)</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        30.228,3            </td>
-                                            <td style="text-align: right; color: black">
-                        30.228,3            </td>
-                                            <td style="text-align: right; color: black">
-                        30.228,3            </td>
-                                            <td style="text-align: right; color: black">
-                        30.228,3            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;Ha</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/63/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">4).&nbsp;Sangat Curam (&gt;40 %)</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                        16.045,12            </td>
-                                            <td style="text-align: right; color: black">
-                        16.045,12            </td>
-                                            <td style="text-align: right; color: black">
-                        16.045,12            </td>
-                                            <td style="text-align: right; color: black">
-                        16.045,12            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;Ha</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/64/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
-                        <tr>
-                    <td></td>
-                    <td></td>
-                    <td><table class="noborder" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top"></td><td>&nbsp;&nbsp;&nbsp;</td><td valign="top">b.&nbsp;Ketinggian Diatas Permukaan Laut (rata-rata)</td></tr></tbody></table></td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                            <td style="text-align: right; color: n/a">
-                        n/a            </td>
-                                            <td style="text-align: right; color: black">
-                                    </td>
-                                <td style="text-align: center;">&nbsp;m</td>
-                    <td style="text-align: left;">Badan Pertanahan Nasional</td>
-                    <td align="center"><a href="http://103.255.15.12/sipd_diy/data_profil#" chart-title="Grafik Series Data DIY Tahun 2010 s/d 2014" data-url="http://103.255.15.12/sipd_diy/data_profil/view_chart/65/0/5/2010-2014" class="chart-icon tiptip green" onclick="viewChart($(this));">chart</a></td>            
-                </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>1. Jumlah Penduduk</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <table class="noborder" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top"></td><td valign="top">A. Laki-Laki</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>   
+                <td></td>  
+                <td></td>      
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <table class="noborder" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top"></td><td valign="top">B. Perempuan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>   
+                <td></td>  
+                <td></td>      
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <table class="noborder" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top"></td><td valign="top">C. Meninggal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>   
+                <td></td>  
+                <td></td>      
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <table class="noborder" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top"></td><td valign="top">D. Miskin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>   
+                <td></td>  
+                <td></td>      
+            </tr>
+            <tr>
+                <td align="center"><b>2</b></td>
+                <td><b>Data Kesehatan</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>1. Kurang Gizi</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>2. Pengguna Alat Kontrasepsi</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center"><b>3</b></td>
+                <td><b>Data Ketenagakerjaan</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>1. Bekerja</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>2. Menganggur</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center"><b>4</b></td>
+                <td><b>Data Teknologi & Komunikasi</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>1. Telepon</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>2. Komputer</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>3. Internet</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center"><b>5</b></td>
+                <td><b>Data Perumahan</b></td>
+                <td><b></b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>1. Tidak Layak Huni</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <table class="noborder" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <table class="noborder" cellspacing="0" cellpadding="0" border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top"></td><td valign="top">A. Sanitasi Buruk</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>   
+                <td></td>  
+                <td></td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>2. Layak Huni</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center"><b>6</b></td>
+                <td><b>Data Pendidikan</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>1. Putus Sekolah</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
                     
             </tbody>
         </table>

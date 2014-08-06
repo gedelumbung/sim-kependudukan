@@ -18,6 +18,22 @@
 	  $cs = Yii::app()->getClientScript();
 	  Yii::app()->clientScript->registerCoreScript('jquery');
 	?>
+  <style type="text/css">
+  .nav-list>li>a, .nav-list .nav-header {
+      margin: 0px 10px;
+  }
+  </style>
+
+  <script type="text/javascript">
+  $(function()
+  {
+      $('#wrapper') .css({'height': (($(window).height()) - 230)+'px'});
+
+      $(window).resize(function(){
+          $('#wrapper') .css({'height': (($(window).height()) - 230)+'px'});
+      });
+  });
+  </script>
 	<?php  
 	  $cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
 	  $cs->registerCssFile($baseUrl.'/css/bootstrap-responsive.min.css');

@@ -1,0 +1,63 @@
+/**
+ * get amount of people by region, group by gender and year
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun, b.jk FROM tbl_rt a join tbl_art b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (:param1) group by b.jk, a.tahun 
+
+/**
+ * get amount of people by region and year of death
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_kematian b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (:param1) group by a.tahun 
+
+/**
+ * get amount of family that are below of poor family :p
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_sosial_ekonomi b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (:param1) and b.kategori_miskin=':param2' group by a.tahun 
+
+/**
+ * get amount of people with bad quality of health by region, group by year
+ */
+SELECT b.jumlah, a.tahun FROM tbl_rt a join (select count(x.id_art) as jumlah, x.id_rt from tbl_art x join tbl_art_perorangan y on x.id_art=y.id_art where y.kurang_gizi=':param1') b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (:param2)  group by a.tahun 
+
+/**
+ * get amount of people that use vertilisation program by region, group by year
+ */
+SELECT b.jumlah, a.tahun FROM tbl_rt a join (select count(x.id_art) as jumlah, x.id_rt from tbl_art x join tbl_art_perorangan y on x.id_art=y.id_art where y.memakai_alat_kb='Tidak') b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * get amount of people that are employment by region, group by year
+ */
+SELECT b.jumlah, a.tahun FROM tbl_rt a join (select count(x.id_art) as jumlah, x.id_rt from tbl_art x join tbl_art_perorangan y on x.id_art=y.id_art where y.bekerja='Ya') b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * get amount of people that are unemployment by region, group by year
+ */
+SELECT b.jumlah, a.tahun FROM tbl_rt a join (select count(x.id_art) as jumlah, x.id_rt from tbl_art x join tbl_art_perorangan y on x.id_art=y.id_art where y.mencari_pekerjaan='Ya') b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * get amount of family that have a house with bad condition by region, group year
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_perumahan_survey b on a.id_rt=b.id_rt where b.kondisi_atap_rumah='Rusak/Bocor' and kondisi_dinding_rumah='Rusak/Bocor' and kondisi_lantai_rumah='Rusak/Bocor' and a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * get amount of family that have a house with good condition by region, group by year
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_perumahan_survey b on a.id_rt=b.id_rt where b.kondisi_atap_rumah='Baik' and kondisi_dinding_rumah='Baik' and kondisi_lantai_rumah='Baik' and a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * get amount of familiy that have a bad sanitation by region, group by year
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_sanitasi_penerangan_survey b on a.id_rt=b.id_rt where b. kepemilikan_jamban ='Tidak Memiliki'  and a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * get amount of people that not go to school by region, group by year
+ */
+SELECT b.jumlah, a.tahun FROM tbl_rt a join (select count(x.id_art) as jumlah, x.id_rt from tbl_art x join tbl_art_perorangan y on x.id_art=y.id_art where y.partisipasi_sekolah='Ya') b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+/**
+ * TIK
+ */
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.telepon ='Ya' or b.handphone='Ya' and a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.komputer ='Ya' and a.id_desa_kelurahan in (1,2)  group by a.tahun 
+
+SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.internet ='Ya' and a.id_desa_kelurahan in (1,2)  group by a.tahun 

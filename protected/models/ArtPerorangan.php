@@ -140,6 +140,7 @@ class ArtPerorangan extends CActiveRecord
 			'id_art' => 'Id Art',
 			'no_urut_ibu_kandung' => 'No Urut Ibu Kandung',
 			'kehadiran_wawancara' => 'Kehadiran Wawancara',
+			'kurang_gizi' => 'Kurang Gizi',
 			'keluhan_panas' => 'Keluhan Panas',
 			'keluhan_batuk' => 'Keluhan Batuk',
 			'keluhan_pilek' => 'Keluhan Pilek',
