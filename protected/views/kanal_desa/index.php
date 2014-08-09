@@ -134,7 +134,7 @@
                         $i++;
                     }
                 ?>
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             <tr>
                 <td></td>
                 <td></td>
@@ -176,7 +176,7 @@
                         $i++;
                     }
                 ?> 
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -219,7 +219,7 @@
                         $i++;
                     }
                 ?>     
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -262,7 +262,7 @@
                         $i++;
                     }
                 ?>
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -305,7 +305,7 @@
                         $i++;
                     }
                 ?> 
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>2</b></td>
@@ -317,6 +317,7 @@
                         echo '<td></td>';
                     }
                 ?>  
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -351,7 +352,7 @@
                         $i++;
                     }
                 ?>  
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -386,7 +387,7 @@
                         $i++;
                     }
                 ?>  
-                <td></td>
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>3</b></td>
@@ -405,24 +406,70 @@
                 <td></td>
                 <td><b>1. Bekerja</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_bekerja'])>0)
+                        {
+                            if($model['penduduk_bekerja'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_bekerja'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_bekerja'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_bekerja'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Menganggur</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_menganggur'])>0)
+                        {
+                            if($model['penduduk_menganggur'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_menganggur'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_menganggur'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_menganggur'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>4</b></td>
@@ -441,36 +488,105 @@
                 <td></td>
                 <td><b>1. Telepon</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_telepon'])>0)
+                        {
+                            if($model['penduduk_telepon'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_telepon'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_telepon'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_telepon'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Komputer</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_komputer'])>0)
+                        {
+                            if($model['penduduk_komputer'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_komputer'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_komputer'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_komputer'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>3. Internet</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_internet'])>0)
+                        {
+                            if($model['penduduk_internet'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_internet'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_internet'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_internet'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>5</b></td>
@@ -489,12 +605,35 @@
                 <td></td>
                 <td><b>1. Tidak Layak Huni</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_tidak_layak_huni'])>0)
+                        {
+                            if($model['penduduk_tidak_layak_huni'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_tidak_layak_huni'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_tidak_layak_huni'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_tidak_layak_huni'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -517,23 +656,70 @@
                     </table>
                 </td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_sanitasi_buruk'])>0)
+                        {
+                            if($model['penduduk_sanitasi_buruk'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_sanitasi_buruk'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_sanitasi_buruk'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_sanitasi_buruk'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
-                <td></td>
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Layak Huni</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_layak_huni'])>0)
+                        {
+                            if($model['penduduk_layak_huni'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_layak_huni'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_layak_huni'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_layak_huni'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
                 ?>  
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>6</b></td>
@@ -545,17 +731,42 @@
                         echo '<td></td>';
                     }
                 ?>  
+                <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Putus Sekolah</b></td>
                 <?php
+                    $i = 0;
                     for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
                     {
-                        echo '<td></td>';
+                        if(count($model['penduduk_putus_sekolah'])>0)
+                        {
+                            if($model['penduduk_putus_sekolah'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_putus_sekolah'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_putus_sekolah'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_putus_sekolah'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
                     }
-                ?>  
+                ?> 
+                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
                     
             </tbody>
