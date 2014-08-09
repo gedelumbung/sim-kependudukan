@@ -70,15 +70,22 @@
             <caption>Wilayah Desa/Kelurahan : <?php echo $model['attr_wilayah']['desa_kelurahan']; ?></caption>
             <thead>
             <tr>
+                <?php
+                    $tahun_awal = 2013;
+                ?>
                 <th rowspan="2">No</th>
                 <th rowspan="2">Kelompok Data</th>
                 <th rowspan="2">Jenis Data</th>
-                <th colspan="5">Tahun</th>
-                <th rowspan="2">Satuan</th>
+                <th colspan="<?php echo date('Y')-$tahun_awal+1; ?>">Tahun</th>
                 <th rowspan="2">Grafik</th>
             </tr>
             <tr>
-                <th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th>        
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<th>'.$tahun.'</th>';
+                    }
+                ?>       
             </tr>
             </thead>
             <tbody>   
@@ -86,26 +93,48 @@
                 <td align="center"><b>1</b></td>
                 <td><b>Data Kependudukan</b></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>   
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Jumlah Penduduk</b></td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk'])>0)
+                        {
+                            if($model['penduduk'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
             <tr>
                 <td></td>
                 <td></td>
@@ -118,13 +147,36 @@
                         </tbody>
                     </table>
                 </td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk_pria'])>0)
+                        {
+                            if($model['penduduk_pria'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_pria'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_pria'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_pria'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?> 
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>   
-                <td></td>  
-                <td></td>      
             </tr>
             <tr>
                 <td></td>
@@ -138,13 +190,36 @@
                         </tbody>
                     </table>
                 </td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk_wanita'])>0)
+                        {
+                            if($model['penduduk_wanita'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_wanita'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_wanita'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_wanita'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?>     
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>   
-                <td></td>  
-                <td></td>      
             </tr>
             <tr>
                 <td></td>
@@ -158,13 +233,36 @@
                         </tbody>
                     </table>
                 </td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk_meninggal'])>0)
+                        {
+                            if($model['penduduk_meninggal'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_meninggal'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_meninggal'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_meninggal'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>   
-                <td></td>  
-                <td></td>      
             </tr>
             <tr>
                 <td></td>
@@ -178,156 +276,224 @@
                         </tbody>
                     </table>
                 </td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk_miskin'])>0)
+                        {
+                            if($model['penduduk_miskin'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_miskin'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_miskin'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_miskin'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?> 
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>   
-                <td></td>  
-                <td></td>      
             </tr>
             <tr>
                 <td align="center"><b>2</b></td>
                 <td><b>Data Kesehatan</b></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Kurang Gizi</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk_kurang_gizi'])>0)
+                        {
+                            if($model['penduduk_kurang_gizi'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_kurang_gizi'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_kurang_gizi'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_kurang_gizi'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Pengguna Alat Kontrasepsi</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    $i = 0;
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        if(count($model['penduduk_kb'])>0)
+                        {
+                            if($model['penduduk_kb'][$i]['tahun']==$tahun)
+                            {
+                                echo "<td>".$model['penduduk_kb'][$i]['jumlah']."</td>";
+                                array_push($model['penduduk_kb'],array(
+                                        'tahun'=>0
+                                    ));
+                            }
+                            else
+                            {
+                                array_push($model['penduduk_kb'],array(
+                                        'tahun'=>0
+                                    ));
+                                echo "<td>0</td>";
+                                $i--;
+                            }
+                        }
+                        else
+                        {
+                            echo "<td>0</td>";
+                        }
+                        $i++;
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td align="center"><b>3</b></td>
                 <td><b>Data Ketenagakerjaan</b></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Bekerja</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Menganggur</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td align="center"><b>4</b></td>
                 <td><b>Data Teknologi & Komunikasi</b></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Telepon</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Komputer</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>3. Internet</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td align="center"><b>5</b></td>
                 <td><b>Data Perumahan</b></td>
                 <td><b></b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Tidak Layak Huni</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
             </tr>
             <tr>
@@ -350,49 +516,46 @@
                         </tbody>
                     </table>
                 </td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>   
-                <td></td>  
-                <td></td>  
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>2. Layak Huni</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
             </tr>
             <tr>
                 <td align="center"><b>6</b></td>
                 <td><b>Data Pendidikan</b></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td><b>1. Putus Sekolah</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                    for($tahun=$tahun_awal;$tahun<=date('Y');$tahun++)
+                    {
+                        echo '<td></td>';
+                    }
+                ?>  
             </tr>
                     
             </tbody>
