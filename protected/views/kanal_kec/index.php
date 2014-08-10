@@ -3,63 +3,7 @@
         <ul class="nav-list">  
             <li class="nav-header">1. Data Wilayah</li>
             <?php
-                $provinsi = new Provinsi();
-                $no_prov = 1;
-                foreach($provinsi->findAll() as $prov)
-                {
-                    ?>
-                        <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/<?php echo $prov->id_provinsi; ?>"><span class="number"></span><?php echo $no_prov; ?><span class="text"><?php echo $prov->provinsi; ?></span></a>
-                            <ul>
-                                <?php
-                                    $criteria_kab = new CDbCriteria;  
-                                    $criteria_kab->condition ='id_provinsi = "'.$prov->id_provinsi.'" ';
-                                    $kabupaten = Kabupaten::model()->findAll($criteria_kab);
-                                    foreach($kabupaten as $kab)
-                                    {
-                                        ?>
-                                            <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/<?php echo $kab->id_kabupaten; ?>"><span class="text"><i class="fa fa-database"></i> <?php echo $kab->kabupaten; ?></span></a>
-                                                <ul>
-                                                    <?php
-                                                        $criteria_kec= new CDbCriteria;  
-                                                        $criteria_kec->condition ='id_kabupaten = "'.$kab->id_kabupaten.'" ';
-                                                        $kecamatan = Kecamatan::model()->findAll($criteria_kec);
-                                                        foreach($kecamatan as $kec)
-                                                        {
-                                                            ?>
-                                                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/<?php echo $kec->id_kecamatan; ?>"><span class="text"><i class="fa fa-database"></i> <?php echo $kec->kecamatan; ?></span></a>
-
-                                                                <ul>
-                                                                    <?php
-                                                                        $criteria_des= new CDbCriteria;  
-                                                                        $criteria_des->condition ='id_kecamatan = "'.$kec->id_kecamatan.'" ';
-                                                                        $desa = DesaKelurahan::model()->findAll($criteria_des);
-                                                                        foreach($desa as $des)
-                                                                        {
-                                                                            ?>
-                                                                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_desa/<?php echo $des->id_desa_kelurahan; ?>"><span class="text"><i class="fa fa-database"></i> <?php echo $des->desa_kelurahan; ?></span></a>
-
-                                                                                
-
-                                                                                </li>
-                                                                            <?php
-                                                                        }
-                                                                    ?>
-                                                                </ul>
-
-                                                                </li>
-                                                            <?php
-                                                        }
-                                                    ?>
-                                                </ul>
-                                            </li>
-                                        <?php
-                                    }
-                                ?>
-                            </ul>
-                        </li>
-                    <?php
-                     $no_prov++;
-                }
+                $this->widget('WilayahWidget');
             ?>
         </ul>
 </div>
@@ -71,7 +15,7 @@
             <thead>
             <tr>
                 <?php
-                    $tahun_awal = 2013;
+                    $tahun_awal = Yii::app()->params['year'];
                 ?>
                 <th rowspan="2">No</th>
                 <th rowspan="2">Kelompok Data</th>
@@ -134,7 +78,7 @@
                         $i++;
                     }
                 ?>
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_penduduk/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             <tr>
                 <td></td>
                 <td></td>
@@ -176,7 +120,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_pria/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -219,7 +163,7 @@
                         $i++;
                     }
                 ?>     
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_perempuan/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -262,7 +206,7 @@
                         $i++;
                     }
                 ?>
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_meninggal/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -305,7 +249,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_miskin/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>2</b></td>
@@ -352,7 +296,7 @@
                         $i++;
                     }
                 ?>  
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_kurang_gizi/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -387,7 +331,7 @@
                         $i++;
                     }
                 ?>  
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_alat_kontrasepsi/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>3</b></td>
@@ -434,7 +378,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_bekerja/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -469,7 +413,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_menganggur/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>4</b></td>
@@ -516,7 +460,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_telepon/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -551,7 +495,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_komputer/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -586,7 +530,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_internet/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>5</b></td>
@@ -633,7 +577,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_tidak_layak_huni/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -684,7 +628,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_sanitasi_buruk/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -719,7 +663,7 @@
                         $i++;
                     }
                 ?>  
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_layak_huni/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>6</b></td>
@@ -766,7 +710,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kec/grafik_putus_sekolah/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
                     
             </tbody>
@@ -780,3 +724,6 @@
     
     
 </div><!--/row-->
+<?php
+$this->widget("ext.magnific-popup.EMagnificPopup", array('target' => '.test-popup-link', 'type' => 'iframe'));
+?>
