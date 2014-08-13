@@ -11,7 +11,7 @@
     
     <div>
         <table class="data">
-            <caption>Wilayah Kabupaten : <?php echo $model['attr_wilayah']['kabupaten']; ?></caption>
+            <caption>Wilayah Provinsi : <?php echo $model['attr_wilayah']['provinsi']; ?></caption>
             <thead>
             <tr>
                 <?php

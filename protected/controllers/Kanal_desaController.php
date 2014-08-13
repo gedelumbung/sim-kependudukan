@@ -12,6 +12,8 @@ class Kanal_desaController extends Controller
 
 	   $model['attr_wilayah'] = $desa;
 
+      if(empty($id)) return false;
+
 	   //data kependudukan
 	   $model['penduduk'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun, b.jk FROM tbl_rt a join tbl_art b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (".$id.") group by a.tahun ")->queryAll();
 

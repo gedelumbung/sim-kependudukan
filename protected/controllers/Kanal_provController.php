@@ -1,34 +1,47 @@
 <?php
 
-class Kanal_kecController extends Controller
+class Kanal_provController extends Controller
 {
 	public function actionView($id)
 	{
 		$merge_id = '';
+		
+      $criteria_prov = new CDbCriteria;  
+      $criteria_prov->condition ='id_provinsi = "'.$id.'" ';
+      $provinsi = Provinsi::model()->find($criteria_prov);
 
-		$criteria_kec= new CDbCriteria;  
-		$criteria_kec->condition ='id_kecamatan = "'.$id.'" ';
-		$kecamatan = Kecamatan::model()->find($criteria_kec);
+      $criteria_kab = new CDbCriteria;  
+      $criteria_kab->condition ='id_provinsi = "'.$provinsi['id_provinsi'].'" ';
+      $kabupaten = Kabupaten::model()->findAll($criteria_kab);
 
-		//fetch id desa
-	   $criteria_des= new CDbCriteria;  
-	   $criteria_des->condition ='id_kecamatan = "'.$kecamatan['id_kecamatan'].'" ';
-	   $desa = DesaKelurahan::model()->findAll($criteria_des);
-	   foreach($desa as $des)
-	   {
-	   		if(empty($merge_id))
-	   		{
-	       		$merge_id = $des->id_desa_kelurahan;
-	   		}
-	   		else
-	   		{
-	       		$merge_id .= ','.$des->id_desa_kelurahan;
-	   		}
-	   }
-
-	   $model['attr_wilayah'] = $kecamatan;
+      foreach($kabupaten as $kab)
+      {
+	   	//fetch id
+			$criteria_kec= new CDbCriteria;  
+			$criteria_kec->condition ='id_kabupaten = "'.$kab['id_kabupaten'].'" ';
+			$kecamatan = Kecamatan::model()->findAll($criteria_kec);
+			foreach($kecamatan as $kec)
+			{
+			   $criteria_des= new CDbCriteria;  
+			   $criteria_des->condition ='id_kecamatan = "'.$kec->id_kecamatan.'" ';
+			   $desa = DesaKelurahan::model()->findAll($criteria_des);
+			   foreach($desa as $des)
+			   {
+					if(empty($merge_id))
+					{
+						$merge_id = $des->id_desa_kelurahan;
+					}
+					else
+					{
+						$merge_id .= ','.$des->id_desa_kelurahan;
+					}
+			   }
+			}
+      }
 
       if(empty($merge_id)) return false;
+
+	   $model['attr_wilayah'] = $provinsi;
 
 	   //data kependudukan
 	   $model['penduduk'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun, b.jk FROM tbl_rt a join tbl_art b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (".$merge_id.") group by a.tahun ")->queryAll();
@@ -55,11 +68,11 @@ class Kanal_kecController extends Controller
 
 	   //data teknologi dan komunikasi
 	   
-	   $model['penduduk_telepon'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.telepon ='Ya' or b.handphone='Ya' and a.id_desa_kelurahan in (".$merge_id.")  group by a.tahun ")->queryAll();
+	   $model['penduduk_telepon'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.telepon ='Ya' or b.handphone='Ya' and a.id_desa_kelurahan in (1,2)  group by a.tahun ")->queryAll();
 	   
-	   $model['penduduk_komputer'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.komputer ='Ya' and a.id_desa_kelurahan in (".$merge_id.")  group by a.tahun ")->queryAll();
+	   $model['penduduk_komputer'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.komputer ='Ya' and a.id_desa_kelurahan in (1,2)  group by a.tahun ")->queryAll();
 	   
-	   $model['penduduk_internet'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.internet ='Ya' and a.id_desa_kelurahan in (".$merge_id.")  group by a.tahun ")->queryAll();
+	   $model['penduduk_internet'] = Yii::app()->db->createCommand("SELECT count(a.id_rt) as jumlah, a.tahun FROM tbl_rt a join tbl_tik b on a.id_rt=b.id_rt where b.internet ='Ya' and a.id_desa_kelurahan in (1,2)  group by a.tahun ")->queryAll();
 
 	   //data perumahan
 	   
@@ -77,6 +90,7 @@ class Kanal_kecController extends Controller
 				'model' => $model,
 				'id' => $id
 			));
+      
 	}
 
    public function actionGrafik_Penduduk($id)
@@ -210,26 +224,32 @@ class Kanal_kecController extends Controller
    private function getGroupId($id)
    {
 		$merge_id = '';
-
-		$criteria_kec= new CDbCriteria;  
-		$criteria_kec->condition ='id_kecamatan = "'.$id.'" ';
-		$kecamatan = Kecamatan::model()->find($criteria_kec);
+		
+      $criteria_kab = new CDbCriteria;  
+      $criteria_kab->condition ='id_kabupaten = "'.$id.'" ';
+      $kabupaten = Kabupaten::model()->find($criteria_kab);
 
 		//fetch id desa
-	   $criteria_des= new CDbCriteria;  
-	   $criteria_des->condition ='id_kecamatan = "'.$kecamatan['id_kecamatan'].'" ';
-	   $desa = DesaKelurahan::model()->findAll($criteria_des);
-	   foreach($desa as $des)
-	   {
-	   		if(empty($merge_id))
-	   		{
-	       		$merge_id = $des->id_desa_kelurahan;
-	   		}
-	   		else
-	   		{
-	       		$merge_id .= ','.$des->id_desa_kelurahan;
-	   		}
-	   }
+	   $criteria_kec= new CDbCriteria;  
+		$criteria_kec->condition ='id_kabupaten = "'.$kabupaten['id_kabupaten'].'" ';
+		$kecamatan = Kecamatan::model()->findAll($criteria_kec);
+		foreach($kecamatan as $kec)
+		{
+		   $criteria_des= new CDbCriteria;  
+		   $criteria_des->condition ='id_kecamatan = "'.$kec->id_kecamatan.'" ';
+		   $desa = DesaKelurahan::model()->findAll($criteria_des);
+		   foreach($desa as $des)
+		   {
+				if(empty($merge_id))
+				{
+					$merge_id = $des->id_desa_kelurahan;
+				}
+				else
+				{
+					$merge_id .= ','.$des->id_desa_kelurahan;
+				}
+		   }
+		}
 
 	   return $merge_id;
 	   
