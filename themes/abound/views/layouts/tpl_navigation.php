@@ -26,7 +26,7 @@
                             array('label'=>'<i class="fa fa-cube"></i> Data Kelurahan/Desa', 'url'=>array('/desa_kelurahan')),
                         ), 'visible'=>!Yii::app()->user->isGuest),
                         array('label'=>'<i class="fa fa-database"></i> Data Kependudukan', 'url'=>array('/rumah_tangga'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label'=>'<i class="icon-white icon-leaf"></i> Account', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'<i class="icon-white icon-leaf"></i> Account', 'url'=>array('/users'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label'=>'<i class="icon-white icon-user"></i> Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                         array('label'=>'<i class="icon-white icon-share"></i> Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
                     ),
