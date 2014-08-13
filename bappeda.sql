@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2014 at 06:39 PM
+-- Generation Time: Aug 13, 2014 at 04:15 PM
 -- Server version: 5.5.35
 -- PHP Version: 5.4.4-14+deb7u5
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `tbl_art` (
 --
 
 INSERT INTO `tbl_art` (`id_art`, `id_rt`, `nik`, `nama_art`, `hubungan_krt`, `jk`, `tmp_lahir`, `tgl_lahir`, `status_kawin`, `gol_darah`, `kartu_kk`, `kartu_ak`, `buku_nikah`) VALUES
-(1, 2, '1109100350', 'Ni Nyoman Witari', 'Istri', 'Perempuan', 'Tabanan', '23 Juni 1968', 'Menikah', 'B', 'Tidak', 'Ya', 'Ya'),
+(1, 1, '1109100350', 'Ni Nyoman Witari', 'Istri', 'Perempuan', 'Tabanan', '23 Juni 1968', 'Menikah', 'B', 'Tidak', 'Ya', 'Ya'),
 (2, 2, '1109100351', 'Wayan Gede Suma Wijaya', 'Anak', 'Laki-Laki', 'Denpasar', '4 Februari 1991', 'Jomblo', 'B', 'Ya', 'Ya', 'Tidak'),
 (3, 2, '1109100352', 'Wayan Darmi', 'Kakak', 'Perempuan', 'Denpasar', '08 Agustus 1954', 'Janda', 'B', 'Ya', 'Ya', 'Tidak');
 
@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `tbl_art_perorangan` (
   `id_art` int(10) NOT NULL,
   `no_urut_ibu_kandung` varchar(150) NOT NULL,
   `kehadiran_wawancara` varchar(150) NOT NULL,
+  `kurang_gizi` varchar(50) NOT NULL,
   `keluhan_panas` varchar(150) NOT NULL,
   `keluhan_batuk` varchar(150) NOT NULL,
   `keluhan_pilek` varchar(150) NOT NULL,
@@ -147,9 +148,9 @@ CREATE TABLE IF NOT EXISTS `tbl_art_perorangan` (
 -- Dumping data for table `tbl_art_perorangan`
 --
 
-INSERT INTO `tbl_art_perorangan` (`id_art_perorangan`, `id_art`, `no_urut_ibu_kandung`, `kehadiran_wawancara`, `keluhan_panas`, `keluhan_batuk`, `keluhan_pilek`, `keluhan_asma`, `keluhan_diare`, `keluhan_sakit_kepala`, `keluhan_sakit_gigi`, `keluhan_lainnya`, `implikasi_keluhan`, `lama_implikasi`, `masih_implikasi`, `pengobatan_sendiri`, `jenis_pengobatan_sendiri`, `pengobatan_jalan`, `berobat_jalan_rs_pemerintah`, `berobat_jalan_rs_swasta`, `berobat_jalan_poliklinik`, `berobat_jalan_puskesmas`, `berobat_jalan_nakes`, `berobat_jalan_batra`, `berobat_jalan_dukun`, `berobat_jalan_lainnya`, `rawat_inap`, `rawat_inap_rs_pemerintah`, `rawat_inap_rs_swasta`, `rawat_inap_puskesmas`, `rawat_inap_nakes`, `rawat_inap_batra`, `rawat_inap_lainnya`, `jamkesmas`, `jamkesda`, `jampersal`, `bpjs`, `umur_balita`, `penolong_kelahiran_1`, `penolong_kelahiran_2`, `imunisasi_bcg`, `imunisasi_dpt`, `imunisasi_polio`, `imunisasi_campak`, `imunisasi_hepatitis_b`, `asi`, `lama_pemberian_asi`, `diberi_asi_saja`, `asi_24_jam`, `pemeriksaan_kehamilan`, `pemeriksaan_kehamilan_trisemester_1`, `pemeriksaan_kehamilan_trisemester_2`, `pemeriksaan_kehamilan_trisemester_3`, `partisipasi_sekolah`, `berhenti_sekolah`, `pendidikan_tertinggi`, `penyelenggara_pendidikan`, `tingkat_tertinggi`, `ijazah_tertinggi`, `membaca_menulis`, `bekerja`, `sekolah`, `mengurus_rt`, `lainnya`, `kegiatan_terbanyak`, `tidak_bekerja_sementara`, `mencari_pekerjaan`, `membuat_usaha`, `alasan_tidak_bekerja`, `jika_ada_tawaran`, `hari_kerja`, `jumlah_jam_kerja_seminggu`, `lapangan_usaha`, `jenis_pekerjaan`, `jabatan_pekerjaan`, `gaji`, `umur_saat_nikah`, `jumlah_tahun_nikah`, `anak_lahir_hidup_laki`, `anak_lahir_hidup_perempuan`, `anak_lahir_masih_hidup_laki`, `anak_lahir_masih_hidup_perempuan`, `anak_meninggal_laki`, `anak_meninggal_perempuan`, `alat_kb`, `memakai_alat_kb`, `alat_kb_dipakai`) VALUES
-(1, 1, '00', 'Ya', 'Tidak', 'Tidak', 'Ya', 'Tidak', 'Tidak', 'Ya', 'Tidak', 'Tidak', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Ya', '00-0000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Ya', 'Intravag/tissue/kondom wanita'),
-(2, 2, '00', 'Ya', 'Ya', 'Tidak', 'Tidak', 'Tidak', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '00-0000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_art_perorangan` (`id_art_perorangan`, `id_art`, `no_urut_ibu_kandung`, `kehadiran_wawancara`, `kurang_gizi`, `keluhan_panas`, `keluhan_batuk`, `keluhan_pilek`, `keluhan_asma`, `keluhan_diare`, `keluhan_sakit_kepala`, `keluhan_sakit_gigi`, `keluhan_lainnya`, `implikasi_keluhan`, `lama_implikasi`, `masih_implikasi`, `pengobatan_sendiri`, `jenis_pengobatan_sendiri`, `pengobatan_jalan`, `berobat_jalan_rs_pemerintah`, `berobat_jalan_rs_swasta`, `berobat_jalan_poliklinik`, `berobat_jalan_puskesmas`, `berobat_jalan_nakes`, `berobat_jalan_batra`, `berobat_jalan_dukun`, `berobat_jalan_lainnya`, `rawat_inap`, `rawat_inap_rs_pemerintah`, `rawat_inap_rs_swasta`, `rawat_inap_puskesmas`, `rawat_inap_nakes`, `rawat_inap_batra`, `rawat_inap_lainnya`, `jamkesmas`, `jamkesda`, `jampersal`, `bpjs`, `umur_balita`, `penolong_kelahiran_1`, `penolong_kelahiran_2`, `imunisasi_bcg`, `imunisasi_dpt`, `imunisasi_polio`, `imunisasi_campak`, `imunisasi_hepatitis_b`, `asi`, `lama_pemberian_asi`, `diberi_asi_saja`, `asi_24_jam`, `pemeriksaan_kehamilan`, `pemeriksaan_kehamilan_trisemester_1`, `pemeriksaan_kehamilan_trisemester_2`, `pemeriksaan_kehamilan_trisemester_3`, `partisipasi_sekolah`, `berhenti_sekolah`, `pendidikan_tertinggi`, `penyelenggara_pendidikan`, `tingkat_tertinggi`, `ijazah_tertinggi`, `membaca_menulis`, `bekerja`, `sekolah`, `mengurus_rt`, `lainnya`, `kegiatan_terbanyak`, `tidak_bekerja_sementara`, `mencari_pekerjaan`, `membuat_usaha`, `alasan_tidak_bekerja`, `jika_ada_tawaran`, `hari_kerja`, `jumlah_jam_kerja_seminggu`, `lapangan_usaha`, `jenis_pekerjaan`, `jabatan_pekerjaan`, `gaji`, `umur_saat_nikah`, `jumlah_tahun_nikah`, `anak_lahir_hidup_laki`, `anak_lahir_hidup_perempuan`, `anak_lahir_masih_hidup_laki`, `anak_lahir_masih_hidup_perempuan`, `anak_meninggal_laki`, `anak_meninggal_perempuan`, `alat_kb`, `memakai_alat_kb`, `alat_kb_dipakai`) VALUES
+(1, 1, '00', 'Ya', 'Ya', 'Tidak', 'Tidak', 'Ya', 'Tidak', 'Tidak', 'Ya', 'Tidak', 'Tidak', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Ya', '00-0000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Ya', 'Intravag/tissue/kondom wanita'),
+(2, 2, '00', 'Ya', 'Tidak', 'Ya', 'Tidak', 'Tidak', 'Tidak', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '00-0000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -164,15 +165,75 @@ CREATE TABLE IF NOT EXISTS `tbl_desa_kelurahan` (
   `id_kecamatan` int(10) NOT NULL,
   `desa_kelurahan` varchar(100) NOT NULL,
   PRIMARY KEY (`id_desa_kelurahan`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=63 ;
 
 --
 -- Dumping data for table `tbl_desa_kelurahan`
 --
 
 INSERT INTO `tbl_desa_kelurahan` (`id_desa_kelurahan`, `id_provinsi`, `id_kabupaten`, `id_kecamatan`, `desa_kelurahan`) VALUES
-(1, 1, 1, 1, 'Sumerta Kelod'),
-(2, 1, 1, 1, 'Sumerta Kaja');
+(1, 1, 1, 1, 'Alu'),
+(2, 1, 1, 1, 'Kalumammang'),
+(3, 1, 1, 1, 'Mombi'),
+(4, 1, 1, 1, 'Pao Pao'),
+(5, 1, 1, 1, 'Pupu Uring'),
+(6, 1, 1, 1, 'Saragian'),
+(7, 1, 1, 2, 'Anreapi'),
+(8, 1, 1, 2, 'Duampanua'),
+(9, 1, 1, 2, 'Kelapa Dua '),
+(10, 1, 1, 2, 'Kunyi'),
+(11, 1, 1, 2, 'Pappandangan'),
+(12, 1, 1, 3, 'Bala'),
+(13, 1, 1, 3, 'Balanipa'),
+(14, 1, 1, 3, 'Galung Tulu'),
+(15, 1, 1, 3, 'Lambanan'),
+(16, 1, 1, 3, 'Lego'),
+(17, 1, 1, 3, 'Mosso'),
+(18, 1, 1, 3, 'Pambusuang'),
+(19, 1, 1, 3, 'Sabang Subik'),
+(20, 1, 1, 3, 'Tammangalle'),
+(21, 1, 1, 3, 'Tammejarra'),
+(22, 1, 1, 4, 'Mammi'),
+(23, 1, 1, 4, 'Amassangan'),
+(24, 1, 1, 4, 'Batetangnga'),
+(25, 1, 1, 4, 'Mirring'),
+(26, 1, 1, 4, 'Tonyaman'),
+(27, 1, 1, 4, 'Kuajang'),
+(28, 1, 1, 4, 'Paku'),
+(29, 1, 1, 5, 'Bulo'),
+(30, 1, 1, 5, 'Daala Timur'),
+(31, 1, 1, 5, 'Karombang'),
+(32, 1, 1, 5, 'Lenggo'),
+(33, 1, 1, 5, 'Pulliwa'),
+(34, 1, 1, 5, 'Tapambanua'),
+(35, 1, 1, 6, 'Bonde'),
+(36, 1, 1, 6, 'Botto'),
+(37, 1, 1, 6, 'Katumbangan'),
+(38, 1, 1, 6, 'Katumbangan Lemo'),
+(39, 1, 1, 6, 'Kenje'),
+(40, 1, 1, 6, 'Laliko'),
+(41, 1, 1, 6, 'Lampoko'),
+(42, 1, 1, 6, 'Lapeo'),
+(43, 1, 1, 6, 'Lemo'),
+(44, 1, 1, 6, 'Ongko'),
+(45, 1, 1, 6, 'Panyampa'),
+(46, 1, 1, 6, 'Pappang'),
+(47, 1, 1, 6, 'Parrape'),
+(48, 1, 1, 6, 'Sumarang'),
+(49, 1, 1, 6, 'Suruang'),
+(50, 1, 1, 7, 'Lembang Lembang'),
+(51, 1, 1, 7, 'Limboro'),
+(52, 1, 1, 7, 'Napo'),
+(53, 1, 1, 7, 'Pendulangan'),
+(54, 1, 1, 7, 'Renggeang'),
+(55, 1, 1, 7, 'Salarri'),
+(56, 1, 1, 7, 'Samasundu'),
+(57, 1, 1, 7, 'Tandasura'),
+(58, 1, 1, 7, 'Tangan Baru'),
+(59, 1, 1, 7, 'Todang Todang'),
+(60, 1, 1, 8, 'Baru'),
+(61, 1, 1, 8, 'Batu Panga'),
+(62, 1, 1, 8, 'Batupanga Daala');
 
 -- --------------------------------------------------------
 
@@ -222,7 +283,7 @@ CREATE TABLE IF NOT EXISTS `tbl_kabupaten` (
 --
 
 INSERT INTO `tbl_kabupaten` (`id_kabupaten`, `id_provinsi`, `kabupaten`) VALUES
-(1, 1, 'Denpasar Kota');
+(1, 1, 'Polewali Mandar');
 
 -- --------------------------------------------------------
 
@@ -263,14 +324,29 @@ CREATE TABLE IF NOT EXISTS `tbl_kecamatan` (
   `id_kabupaten` int(10) NOT NULL,
   `kecamatan` varchar(100) NOT NULL,
   PRIMARY KEY (`id_kecamatan`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `tbl_kecamatan`
 --
 
 INSERT INTO `tbl_kecamatan` (`id_kecamatan`, `id_provinsi`, `id_kabupaten`, `kecamatan`) VALUES
-(1, 1, 1, 'Denpasar Timur');
+(1, 1, 1, 'Allu'),
+(2, 1, 1, 'Anreapi'),
+(3, 1, 1, 'Balanipa'),
+(4, 1, 1, 'Binuang'),
+(5, 1, 1, 'Bulo'),
+(6, 1, 1, 'Campalagian'),
+(7, 1, 1, 'Limboro'),
+(8, 1, 1, 'Luyo / Lujo'),
+(9, 1, 1, 'Mapilli'),
+(10, 1, 1, 'Matakali'),
+(11, 1, 1, 'Matangnga'),
+(12, 1, 1, 'Polewali'),
+(13, 1, 1, 'Tapango'),
+(14, 1, 1, 'Tinambung'),
+(15, 1, 1, 'Tubbi Taramanu / Tutallu'),
+(16, 1, 1, 'Wonomulyo');
 
 -- --------------------------------------------------------
 
@@ -557,14 +633,15 @@ CREATE TABLE IF NOT EXISTS `tbl_provinsi` (
   `id_provinsi` int(10) NOT NULL AUTO_INCREMENT,
   `provinsi` varchar(100) NOT NULL,
   PRIMARY KEY (`id_provinsi`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_provinsi`
 --
 
 INSERT INTO `tbl_provinsi` (`id_provinsi`, `provinsi`) VALUES
-(1, 'Bali');
+(1, 'Sulawesi Barat'),
+(2, 'Bali');
 
 -- --------------------------------------------------------
 
@@ -582,15 +659,16 @@ CREATE TABLE IF NOT EXISTS `tbl_rt` (
   `jumlah_art_meninggal` int(5) NOT NULL,
   `tahun` int(4) NOT NULL,
   PRIMARY KEY (`id_rt`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tbl_rt`
 --
 
 INSERT INTO `tbl_rt` (`id_rt`, `id_desa_kelurahan`, `nama_krt`, `suku_krt`, `jumlah_art`, `jumlah_anak`, `jumlah_art_meninggal`, `tahun`) VALUES
-(1, 1, 'Gede Suma Wijaya', 'Bali', 3, 1, 0, 2014),
-(2, 2, 'Nengah Sudana', 'Bali', 4, 1, 1, 2014);
+(1, 2, 'Gede Suma Wijaya', 'Bali', 3, 1, 0, 2013),
+(2, 2, 'Nengah Sudana', 'Bali', 4, 1, 1, 2014),
+(3, 6, 'Masbulloh', 'Bali', 9, 3, 1, 2014);
 
 -- --------------------------------------------------------
 
@@ -677,7 +755,7 @@ CREATE TABLE IF NOT EXISTS `tbl_sosial_ekonomi` (
 --
 
 INSERT INTO `tbl_sosial_ekonomi` (`id_sosial_ekonomi`, `id_rt`, `kategori_miskin`, `kartu_kesehatan`, `memperoleh_kartu_kesehatan`, `rawat_jalan_inap_kartu_kesehatan_3_bulan`, `biaya_rawat_jalan_inap`, `melahirkan_kehamilan_kartu_kesehatan_3_bulan`, `biaya_melahirkan_kehamilan`, `keperluan_kb_kartu_kesehatan_3_bulan`, `biaya_keperluan_kb`, `beras_murah`, `jumlah_beras_murah`, `harga_beras_murah`, `kredit_usaha`, `jumlah_kredit_usaha`, `bunga_kredit_usaha`, `sumber_kredit_usaha`, `art_sebagai_tki`, `tki_perawat_jumlah`, `tki_perawat_tahun`, `tki_pembantu_jumlah`, `tki_pembantu_tahun`, `tki_supir_jumlah`, `tki_supir_tahun`, `tki_tukang_bangunan_jumlah`, `tki_tukang_bangunan_tahun`, `tki_buruh_perkebunan_jumlah`, `tki_buruh_perkebunan_tahun`, `tki_buruh_pabrik_jumlah`, `tki_buruh_pabrik_tahun`, `beasiswa_pemerintah_jps`, `beasiswa_pemerintah_non_jps`, `beasiswa_gn_ota`, `beasiswa_swasta`, `beasiswa_sekolah`, `beasiswa_perorangan`, `beasiswa_lainnya`, `beasiswa_sd_jumlah`, `beasiswa_sd_tahun`, `beasiswa_smp_jumlah`, `beasiswa_smp_tahun`, `beasiswa_sma_jumlah`, `beasiswa_sma_tahun`) VALUES
-(1, 2, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '2011', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(1, 2, 'Ya', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '2011', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -701,11 +779,12 @@ CREATE TABLE IF NOT EXISTS `tbl_tik` (
   `internet_lainnya` varchar(50) NOT NULL,
   `jumlah_pengguna_internet_lainnya` varchar(50) NOT NULL,
   PRIMARY KEY (`id_tik`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_tik`
 --
 
 INSERT INTO `tbl_tik` (`id_tik`, `id_rt`, `telepon`, `handphone`, `jumlah_no_handphone`, `komputer`, `internet`, `jumlah_pengguna_internet`, `internet_warnet`, `jumlah_pengguna_internet_warnet`, `internet_kantor_sekolah`, `jumlah_pengguna_internet_kantor_sekolah`, `internet_lainnya`, `jumlah_pengguna_internet_lainnya`) VALUES
-(1, 2, 'Tidak', 'Ya', '3', 'Ya', 'Ya', '1', 'Tidak', '0', 'Tidak', '0', 'Ya', '1');
+(1, 2, 'Tidak', 'Ya', '3', 'Ya', 'Ya', '1', 'Tidak', '0', 'Tidak', '0', 'Ya', '1'),
+(2, 3, 'Ya', 'Tidak', '4', 'Ya', 'Ya', '3', 'Ya', '1', 'Tidak', '0', 'Tidak', '9');
