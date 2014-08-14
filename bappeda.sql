@@ -788,3 +788,28 @@ CREATE TABLE IF NOT EXISTS `tbl_tik` (
 INSERT INTO `tbl_tik` (`id_tik`, `id_rt`, `telepon`, `handphone`, `jumlah_no_handphone`, `komputer`, `internet`, `jumlah_pengguna_internet`, `internet_warnet`, `jumlah_pengguna_internet_warnet`, `internet_kantor_sekolah`, `jumlah_pengguna_internet_kantor_sekolah`, `internet_lainnya`, `jumlah_pengguna_internet_lainnya`) VALUES
 (1, 2, 'Tidak', 'Ya', '3', 'Ya', 'Ya', '1', 'Tidak', '0', 'Tidak', '0', 'Ya', '1'),
 (2, 3, 'Ya', 'Tidak', '4', 'Ya', 'Ya', '3', 'Ya', '1', 'Tidak', '0', 'Tidak', '9');
+
+
+
+CREATE TABLE IF NOT EXISTS `tbl_user_cms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `nama` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `status` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `tbl_user_cms`
+--
+
+INSERT INTO `tbl_user_cms` (`id`, `username`, `password`, `nama`, `email`, `status`) VALUES
+(1, 'gede', '$2a$10$NskiH9hitZ7EWCDMou1UD.NRqkup7.uisd/t6./lOZ12Jikg7QWF.', 'Administrator', 'dev@dua-rasa.com', 'administrasi'),
+(2, 'admin', '$2a$10$M0Z3.tA3.fv/KIUN0Ck6OO8bX7e7d.ZE7EGRE8.H0ig5qlUUVT9jO', 'Gede Lumbung', 'gede@mail.com', 'laboratorium'),
+(3, 'agus', '$2a$10$GRREBP6D4gGOwcXmhvlwe.LBbbdH405KAxnJP6.IiqAGgPEFF0M8O', 'Agus Ganteng', 'agus@mail.com', 'radiologi'),
+(4, 'fisioterapi', '$2a$10$lfk1b0qhMQvyZWrn5yc/yu/If8ysN3jPrg49JvJJu6tRi4T0Sl9TK', 'Fisioterapi User', 'fisioterapi@mail.com', 'fisioterapi'),
+(5, 'registrasi', '$2a$10$cBlgSna.FFQztovwPkKy8uW2U0ZrwKd/HFPxMPtIYeGPcUIYSNt1.', 'registrasi', 'registrasi@mail.com', 'registrasi'),
+(6, 'ugd', '$2a$10$Wm18mXxJfU1k5GjqLkJgCeiIejAIHLKii8UaeuXQCt4y4XxpPe3Tu', 'ugd', 'ugd@mail.com', 'ugd'),
+(7, 'apotik', '$2a$10$FGmZkJSrn6eu.p2FN4/OG.au8.Y8N91vcYgMDGNBn6utkZevF7cqS', 'apotik', 'apotik@mail.com', 'apotik');
