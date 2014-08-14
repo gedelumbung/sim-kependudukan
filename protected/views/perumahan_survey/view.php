@@ -51,7 +51,10 @@ $this->menu=array(
 		'jarak_sempadan_pantai',
 		'jarak_sempadan_irigasi',
 	),
-)); ?>
+));
+	$gambar = !empty($model->gambar) ? Yii::app()->baseUrl.'/media/perumahan/'.$model->gambar : '';
+?>
+<img id="uploadedImage" src="<?php echo $gambar; ?>">
 
 </div>
 </div>

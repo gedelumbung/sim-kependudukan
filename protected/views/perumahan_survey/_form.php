@@ -312,6 +312,44 @@
 		</div>
 	</div>
 	
+<div class='row-fluid'>
+	<div class="span6">
+		<div class="row">
+			<?php echo $form->labelEx($model,'gambar'); ?>
+			<? $this->widget('ext.EAjaxUpload.EAjaxUpload',
+			array(
+			    'id'=>'uploadFile',
+			    'config'=>array(
+			           'action'=>Yii::app()->createUrl('perumahan_survey/add_gambar'),
+			           'allowedExtensions'=>array("jpg","png"),
+			           'sizeLimit'=>1*1024*1024,// maximum file size in bytes
+			           'onComplete'=>"js:function(id, fileName, responseJSON){ 
+			           		$('#PerumahanSurvey_gambar').val(responseJSON['filename']); 
+			           		$('#uploadedImage').attr('src', responseJSON['url']);
+			           }",
+			           'messages'=>array(
+													'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+													'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+													'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+													'emptyError'=>"{file} is empty, please select files again without it.",
+													'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+			                            ),
+			           'showMessage'=>"js:function(message){ alert(message); }"
+			          )
+			)); ?>
+			<?php echo $form->textField($model,'gambar', array('readonly' => true)); ?>
+			<?php echo $form->error($model,'gambar'); ?>
+		</div>
+	</div>
+	<div class="span6">
+		<div class="row">
+			<?php
+				$gambar = !empty($model->gambar) ? Yii::app()->baseUrl.'/media/perumahan/'.$model->gambar : '';
+			?>
+			<img id="uploadedImage" src="<?php echo $gambar; ?>">
+		</div>
+	</div>
+</div>
 			
 
 

@@ -50,7 +50,7 @@ class PerumahanSurvey extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_rt, alamat_rumah_lainnya', 'required'),
+			array('id_rt, alamat_rumah_lainnya, gambar', 'required'),
 			array('id_rt', 'numerical', 'integerOnly'=>true),
 			array('jenis_rumah, konstruksi_rumah, kepemilikan_rumah, fungsi_rumah, tahun_pembuatan_rumah, jumlah_lantai, luas_lantai_1, luas_lantai_2, luas_lantai_3, luas_pekarangan, bagian_terluas_atap, kondisi_atap_rumah, bagian_terluas_dinding, kondisi_dinding_rumah, bagian_terluas_lantai, kondisi_lantai_rumah, jumlah_kepemilikan_rumah_lainnya, kepemilikan_imb, penertiban_imb, kepemilikan_surat_tanah, jarak_sempadan_jalan, jarak_sempadan_sungai, jarak_sempadan_pantai, jarak_sempadan_irigasi', 'length', 'max'=>150),
 			// The following rule is used by search().

@@ -155,7 +155,7 @@
 			           'showMessage'=>"js:function(message){ alert(message); }"
 			          )
 			)); ?>
-			<?php echo $form->hiddenField($model,'gambar'); ?>
+			<?php echo $form->textField($model,'gambar', array('readonly' => true)); ?>
 			<?php echo $form->error($model,'gambar'); ?>
 		</div>
 	</div>

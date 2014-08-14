@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 14, 2014 at 04:11 AM
+-- Generation Time: Aug 14, 2014 at 04:42 AM
 -- Server version: 5.5.35
 -- PHP Version: 5.4.4-14+deb7u5
 
@@ -614,15 +614,17 @@ CREATE TABLE IF NOT EXISTS `tbl_perumahan_survey` (
   `jarak_sempadan_sungai` varchar(150) DEFAULT NULL,
   `jarak_sempadan_pantai` varchar(150) DEFAULT NULL,
   `jarak_sempadan_irigasi` varchar(150) DEFAULT NULL,
+  `gambar` varchar(100) NOT NULL,
   PRIMARY KEY (`id_perumahan_survey`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_perumahan_survey`
 --
 
-INSERT INTO `tbl_perumahan_survey` (`id_perumahan_survey`, `id_rt`, `jenis_rumah`, `konstruksi_rumah`, `kepemilikan_rumah`, `fungsi_rumah`, `tahun_pembuatan_rumah`, `jumlah_lantai`, `luas_lantai_1`, `luas_lantai_2`, `luas_lantai_3`, `luas_pekarangan`, `bagian_terluas_atap`, `kondisi_atap_rumah`, `bagian_terluas_dinding`, `kondisi_dinding_rumah`, `bagian_terluas_lantai`, `kondisi_lantai_rumah`, `jumlah_kepemilikan_rumah_lainnya`, `alamat_rumah_lainnya`, `kepemilikan_imb`, `penertiban_imb`, `kepemilikan_surat_tanah`, `jarak_sempadan_jalan`, `jarak_sempadan_sungai`, `jarak_sempadan_pantai`, `jarak_sempadan_irigasi`) VALUES
-(1, 2, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Baik', 'Semen', 'Baik', '', 'Denpasar', '', '', 'SKT Camat', '', '', '', '');
+INSERT INTO `tbl_perumahan_survey` (`id_perumahan_survey`, `id_rt`, `jenis_rumah`, `konstruksi_rumah`, `kepemilikan_rumah`, `fungsi_rumah`, `tahun_pembuatan_rumah`, `jumlah_lantai`, `luas_lantai_1`, `luas_lantai_2`, `luas_lantai_3`, `luas_pekarangan`, `bagian_terluas_atap`, `kondisi_atap_rumah`, `bagian_terluas_dinding`, `kondisi_dinding_rumah`, `bagian_terluas_lantai`, `kondisi_lantai_rumah`, `jumlah_kepemilikan_rumah_lainnya`, `alamat_rumah_lainnya`, `kepemilikan_imb`, `penertiban_imb`, `kepemilikan_surat_tanah`, `jarak_sempadan_jalan`, `jarak_sempadan_sungai`, `jarak_sempadan_pantai`, `jarak_sempadan_irigasi`, `gambar`) VALUES
+(1, 2, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Baik', 'Semen', 'Baik', '', 'Denpasar', '', '', 'SKT Camat', '', '', '', '', '5e960336df275d0ad30de2a8a6c8ca86.png'),
+(2, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ffff', '', '', '', '', '', '', '', 'c22de10c720d761a200aca0f735b9b58.png');
 
 -- --------------------------------------------------------
 
