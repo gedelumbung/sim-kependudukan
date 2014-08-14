@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 13, 2014 at 04:15 PM
+-- Generation Time: Aug 14, 2014 at 04:11 AM
 -- Server version: 5.5.35
 -- PHP Version: 5.4.4-14+deb7u5
 
@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `tbl_art` (
   `kartu_kk` varchar(10) NOT NULL,
   `kartu_ak` varchar(10) NOT NULL,
   `buku_nikah` varchar(10) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   PRIMARY KEY (`id_art`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
@@ -41,10 +42,10 @@ CREATE TABLE IF NOT EXISTS `tbl_art` (
 -- Dumping data for table `tbl_art`
 --
 
-INSERT INTO `tbl_art` (`id_art`, `id_rt`, `nik`, `nama_art`, `hubungan_krt`, `jk`, `tmp_lahir`, `tgl_lahir`, `status_kawin`, `gol_darah`, `kartu_kk`, `kartu_ak`, `buku_nikah`) VALUES
-(1, 1, '1109100350', 'Ni Nyoman Witari', 'Istri', 'Perempuan', 'Tabanan', '23 Juni 1968', 'Menikah', 'B', 'Tidak', 'Ya', 'Ya'),
-(2, 2, '1109100351', 'Wayan Gede Suma Wijaya', 'Anak', 'Laki-Laki', 'Denpasar', '4 Februari 1991', 'Jomblo', 'B', 'Ya', 'Ya', 'Tidak'),
-(3, 2, '1109100352', 'Wayan Darmi', 'Kakak', 'Perempuan', 'Denpasar', '08 Agustus 1954', 'Janda', 'B', 'Ya', 'Ya', 'Tidak');
+INSERT INTO `tbl_art` (`id_art`, `id_rt`, `nik`, `nama_art`, `hubungan_krt`, `jk`, `tmp_lahir`, `tgl_lahir`, `status_kawin`, `gol_darah`, `kartu_kk`, `kartu_ak`, `buku_nikah`, `gambar`) VALUES
+(1, 1, '1109100350', 'Ni Nyoman Witari', 'Istri', 'Perempuan', 'Tabanan', '23 Juni 1968', 'Menikah', 'B', 'Tidak', 'Ya', 'Ya', 'b2f7d382428756b34762a115c3108587.png'),
+(2, 2, '1109100351', 'Wayan Gede Suma Wijaya', 'Anak', 'Laki-Laki', 'Denpasar', '4 Februari 1991', 'Jomblo', 'B', 'Ya', 'Ya', 'Tidak', ''),
+(3, 2, '1109100352', 'Wayan Darmi', 'Kakak', 'Perempuan', 'Denpasar', '08 Agustus 1954', 'Janda', 'B', 'Ya', 'Ya', 'Tidak', '');
 
 -- --------------------------------------------------------
 
@@ -789,7 +790,11 @@ INSERT INTO `tbl_tik` (`id_tik`, `id_rt`, `telepon`, `handphone`, `jumlah_no_han
 (1, 2, 'Tidak', 'Ya', '3', 'Ya', 'Ya', '1', 'Tidak', '0', 'Tidak', '0', 'Ya', '1'),
 (2, 3, 'Ya', 'Tidak', '4', 'Ya', 'Ya', '3', 'Ya', '1', 'Tidak', '0', 'Tidak', '9');
 
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `tbl_user_cms`
+--
 
 CREATE TABLE IF NOT EXISTS `tbl_user_cms` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
