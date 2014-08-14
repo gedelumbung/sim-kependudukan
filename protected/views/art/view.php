@@ -42,7 +42,10 @@ $this->menu=array(
 		'kartu_ak',
 		'buku_nikah',
 	),
-)); ?>
+)); 
+	$gambar = !empty($model->gambar) ? Yii::app()->baseUrl.'/media/art/'.$model->gambar : '';
+?>
+<img id="uploadedImage" src="<?php echo $gambar; ?>">
 
 </div>
 </div>

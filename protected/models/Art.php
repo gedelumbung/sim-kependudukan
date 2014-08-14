@@ -36,7 +36,7 @@ class Art extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_rt, nik, nama_art, hubungan_krt, jk, tmp_lahir, tgl_lahir, status_kawin, gol_darah, kartu_kk, kartu_ak, buku_nikah', 'required'),
+			array('id_rt, nik, nama_art, hubungan_krt, jk, tmp_lahir, tgl_lahir, status_kawin, gol_darah, kartu_kk, kartu_ak, buku_nikah, gambar', 'required'),
 			array('id_rt', 'numerical', 'integerOnly'=>true),
 			array('nik', 'length', 'max'=>100),
 			array('nama_art', 'length', 'max'=>150),
