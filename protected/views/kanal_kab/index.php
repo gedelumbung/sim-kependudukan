@@ -11,7 +11,10 @@
     
     <div>
         <table class="data">
-            <caption>Wilayah Kabupaten : <?php echo $model['attr_wilayah']['kabupaten']; ?></caption>
+            <caption>Wilayah Kabupaten : <?php echo $model['attr_wilayah']['kabupaten']; ?>
+                <a href="" class="btn btn-small btn-primary pull-right"><i class="icon-print icon-white"></i> Print</a>
+                <a href="" class="btn btn-small btn-primary pull-right"><i class="icon-share icon-white"></i> Export Excel</a>
+            </caption>
             <thead>
             <tr>
                 <?php

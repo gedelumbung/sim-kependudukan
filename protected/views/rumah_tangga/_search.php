@@ -13,8 +13,14 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'id_desa_kelurahan'); ?>
-		<?php echo CHtml::dropDownList(
-							'RumahTangga[id_desa_kelurahan]',$model->id_desa_kelurahan,array(''=>'Semua') + CHtml::listData(DesaKelurahan::model()->findAll(),'id_desa_kelurahan','desa_kelurahan')); ?>
+
+			<?php
+				$this->widget('ext.chosen.Chosen',array(
+				   'name' => 'RumahTangga[id_desa_kelurahan]', // input name
+				   'value' => $model->id_desa_kelurahan, // selection
+				   'data' => array(''=>'Semua') + CHtml::listData(DesaKelurahan::model()->findAll(),'id_desa_kelurahan','desa_kelurahan'),
+				));
+			?>
 	</div>
 
 	<div class="row">

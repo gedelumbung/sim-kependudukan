@@ -33,6 +33,9 @@ return array(
 		),
 	),
 
+	//languange
+	'language' => 'id',
+
 	// application components
 	'components'=>array(
 		'user'=>array(

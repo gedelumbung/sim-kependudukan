@@ -28,22 +28,37 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_provinsi'); ?>
-			<?php echo CHtml::dropDownList(
-							'DesaKelurahan[id_provinsi]',$model->id_provinsi,array(''=>'Semua') + CHtml::listData(Provinsi::model()->findAll(),'id_provinsi','provinsi')); ?>
+			<?php
+				$this->widget('ext.chosen.Chosen',array(
+				   'name' => 'DesaKelurahan[id_provinsi]', // input name
+				   'value' => $model->id_provinsi, // selection
+				   'data' => array(''=>'Semua') + CHtml::listData(Provinsi::model()->findAll(),'id_provinsi','provinsi'),
+				));
+			?>
 		<?php echo $form->error($model,'id_provinsi'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_kabupaten'); ?>
-			<?php echo CHtml::dropDownList(
-							'DesaKelurahan[id_kabupaten]',$model->id_kabupaten,array(''=>'Semua') + CHtml::listData(Kabupaten::model()->findAll(),'id_kabupaten','kabupaten')); ?>
+			<?php
+				$this->widget('ext.chosen.Chosen',array(
+				   'name' => 'DesaKelurahan[id_kabupaten]', // input name
+				   'value' => $model->id_kabupaten, // selection
+				   'data' => array(''=>'Semua') + CHtml::listData(Kabupaten::model()->findAll(),'id_kabupaten','kabupaten'),
+				));
+			?>
 		<?php echo $form->error($model,'id_kabupaten'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_kecamatan'); ?>
-			<?php echo CHtml::dropDownList(
-							'DesaKelurahan[id_kecamatan]',$model->id_kecamatan,array(''=>'Semua') + CHtml::listData(Kecamatan::model()->findAll(),'id_kecamatan','kecamatan')); ?>
+			<?php
+				$this->widget('ext.chosen.Chosen',array(
+				   'name' => 'DesaKelurahan[id_kecamatan]', // input name
+				   'value' => $model->id_kecamatan, // selection
+				   'data' => array(''=>'Semua') + CHtml::listData(Kecamatan::model()->findAll(),'id_kecamatan','kecamatan'),
+				));
+			?>
 		<?php echo $form->error($model,'id_kecamatan'); ?>
 	</div>
 

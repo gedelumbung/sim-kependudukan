@@ -11,7 +11,11 @@
     
     <div>
         <table class="data">
-            <caption>Wilayah Provinsi : <?php echo $model['attr_wilayah']['provinsi']; ?></caption>
+            <caption>
+                Wilayah Provinsi : <?php echo $model['attr_wilayah']['provinsi']; ?>
+                <a href="" class="btn btn-small btn-primary pull-right"><i class="icon-print icon-white"></i> Print</a>
+                <a href="" class="btn btn-small btn-primary pull-right"><i class="icon-share icon-white"></i> Export Excel</a>
+            </caption>
             <thead>
             <tr>
                 <?php
@@ -78,7 +82,7 @@
                         $i++;
                     }
                 ?>
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_penduduk/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_penduduk/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             <tr>
                 <td></td>
                 <td></td>
@@ -120,7 +124,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_pria/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_pria/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -163,7 +167,7 @@
                         $i++;
                     }
                 ?>     
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_perempuan/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_perempuan/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -206,7 +210,7 @@
                         $i++;
                     }
                 ?>
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_meninggal/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_meninggal/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -249,7 +253,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_miskin/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_miskin/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>2</b></td>
@@ -296,7 +300,7 @@
                         $i++;
                     }
                 ?>  
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_kurang_gizi/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_kurang_gizi/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -331,7 +335,7 @@
                         $i++;
                     }
                 ?>  
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_alat_kontrasepsi/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_alat_kontrasepsi/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>3</b></td>
@@ -378,7 +382,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_bekerja/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_bekerja/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -413,7 +417,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_menganggur/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_menganggur/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>4</b></td>
@@ -460,7 +464,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_telepon/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_telepon/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -495,7 +499,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_komputer/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_komputer/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -530,7 +534,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_internet/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_internet/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>5</b></td>
@@ -577,7 +581,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_tidak_layak_huni/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_tidak_layak_huni/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -628,7 +632,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_sanitasi_buruk/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_sanitasi_buruk/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -663,7 +667,7 @@
                         $i++;
                     }
                 ?>  
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_layak_huni/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_layak_huni/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
             <tr>
                 <td align="center"><b>6</b></td>
@@ -710,7 +714,7 @@
                         $i++;
                     }
                 ?> 
-                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/grafik_putus_sekolah/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
+                <td><a class="btn btn-small btn-primary test-popup-link" href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/grafik_putus_sekolah/<?php echo $id; ?>"><i class="icon-signal icon-white"></i> Grafik</a></td>
             </tr>
                     
             </tbody>

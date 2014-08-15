@@ -28,8 +28,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_provinsi'); ?>
-			<?php echo CHtml::dropDownList(
-							'Kabupaten[id_provinsi]',$model->id_provinsi,array(''=>'Semua') + CHtml::listData(Provinsi::model()->findAll(),'id_provinsi','provinsi')); ?>
+
+			<?php
+				$this->widget('ext.chosen.Chosen',array(
+				   'name' => 'Kabupaten[id_provinsi]', // input name
+				   'value' => $model->id_provinsi, // selection
+				   'data' => array(''=>'Semua') + CHtml::listData(Provinsi::model()->findAll(),'id_provinsi','provinsi'),
+				));
+			?>
 		<?php echo $form->error($model,'id_provinsi'); ?>
 	</div>
 

@@ -1228,7 +1228,8 @@ table.forum td{
 }
 .nav-list li a span.text{
     display:inline-block;
-    margin-left:32px;
+    margin-left:20px;
+    padding: 3px;
 }
 .heading{
     line-height:30px;
@@ -1580,4 +1581,8 @@ p.error{
 
 table.data th{
   font-size: 12px;
+}
+
+table.data caption{
+  font-size: 18px;
 }
