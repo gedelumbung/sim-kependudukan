@@ -59,6 +59,36 @@
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.masonry.min.js');
 	  $cs->registerScriptFile($baseUrl.'/js/styleswitcher.js');
 	?>
+  
+
+<script type="text/javascript">
+  function call_kabupaten(id)
+  {
+    var value = id.options[id.selectedIndex].value;
+    $.get("<?php echo Yii::app()->baseUrl; ?>/kabupaten/by_provinsi/"+value, function( data ) {
+      $("#kabupaten").empty();
+      $("#RumahTangga_id_desa_kelurahan").empty();
+      $("#kabupaten").append(data);
+    });
+  }
+  function call_kecamatan(id)
+  {
+    var value = id.options[id.selectedIndex].value;
+    $.get("<?php echo Yii::app()->baseUrl; ?>/kecamatan/by_kabupaten/"+value, function( data ) {
+      $("#kecamatan").empty();
+      $("#RumahTangga_id_desa_kelurahan").empty();
+      $("#kecamatan").append(data);
+    });
+  }
+  function call_desa(id)
+  {
+    var value = id.options[id.selectedIndex].value;
+    $.get("<?php echo Yii::app()->baseUrl; ?>/desa_kelurahan/by_kecamatan/"+value, function( data ) {
+      $("#RumahTangga_id_desa_kelurahan").empty();
+      $("#RumahTangga_id_desa_kelurahan").append(data);
+    });
+  }
+</script>
   </head>
 
 <body>

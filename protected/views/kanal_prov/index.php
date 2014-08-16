@@ -13,8 +13,8 @@
         <table class="data">
             <caption>
                 Wilayah Provinsi : <?php echo $model['attr_wilayah']['provinsi']; ?>
-                <a href="" class="btn btn-small btn-primary pull-right"><i class="icon-print icon-white"></i> Print</a>
-                <a href="" class="btn btn-small btn-primary pull-right"><i class="icon-share icon-white"></i> Export Excel</a>
+                <a href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/cetak/<?php echo $id; ?>" class="btn btn-small btn-primary pull-right"><i class="icon-print icon-white"></i> Print</a>
+                <a href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/export/<?php echo $id; ?>" class="btn btn-small btn-primary pull-right"><i class="icon-share icon-white"></i> Export Excel</a>
             </caption>
             <thead>
             <tr>

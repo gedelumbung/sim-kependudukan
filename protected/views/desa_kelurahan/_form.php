@@ -28,37 +28,32 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_provinsi'); ?>
+			<select name="DesaKelurahan[id_provinsi]" onChange="call_kabupaten(this)">
+			<option>Pilih</option>
 			<?php
-				$this->widget('ext.chosen.Chosen',array(
-				   'name' => 'DesaKelurahan[id_provinsi]', // input name
-				   'value' => $model->id_provinsi, // selection
-				   'data' => array(''=>'Semua') + CHtml::listData(Provinsi::model()->findAll(),'id_provinsi','provinsi'),
-				));
+				$provinsi = Provinsi::model()->findAll();
+				foreach($provinsi as $p)
+				{
+					echo '<option value="'.$p['id_provinsi'].'">'.$p['provinsi'].'</option>';
+				}
 			?>
+			</select>
 		<?php echo $form->error($model,'id_provinsi'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_kabupaten'); ?>
-			<?php
-				$this->widget('ext.chosen.Chosen',array(
-				   'name' => 'DesaKelurahan[id_kabupaten]', // input name
-				   'value' => $model->id_kabupaten, // selection
-				   'data' => array(''=>'Semua') + CHtml::listData(Kabupaten::model()->findAll(),'id_kabupaten','kabupaten'),
-				));
-			?>
+			<select name="DesaKelurahan[id_kabupaten]" id="kabupaten" onChange="call_kecamatan(this)">
+				<option>Pilih</option>
+			</select>
 		<?php echo $form->error($model,'id_kabupaten'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_kecamatan'); ?>
-			<?php
-				$this->widget('ext.chosen.Chosen',array(
-				   'name' => 'DesaKelurahan[id_kecamatan]', // input name
-				   'value' => $model->id_kecamatan, // selection
-				   'data' => array(''=>'Semua') + CHtml::listData(Kecamatan::model()->findAll(),'id_kecamatan','kecamatan'),
-				));
-			?>
+			<select name="DesaKelurahan[id_kecamatan]" id="kecamatan">
+				<option>Pilih</option>
+			</select>
 		<?php echo $form->error($model,'id_kecamatan'); ?>
 	</div>
 

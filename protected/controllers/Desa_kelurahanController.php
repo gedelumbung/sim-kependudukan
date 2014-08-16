@@ -36,7 +36,7 @@ class Desa_kelurahanController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','by_kecamatan'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -138,6 +138,20 @@ class Desa_kelurahanController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionBy_Kecamatan($id)
+	{
+	   $criteria= new CDbCriteria;  
+	   $criteria->condition ='id_kecamatan = "'.$id.'" ';
+		$model=DesaKelurahan::model()->findAll($criteria);
+
+		$return = '<option>Pilih</option>';
+		foreach($model as $m)
+		{
+			$return .= '<option value="'.$m['id_desa_kelurahan'].'">'.$m['desa_kelurahan'].'</option>';
+		}
+		echo $return;
 	}
 
 	/**

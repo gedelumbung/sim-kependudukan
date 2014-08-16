@@ -14,13 +14,29 @@
 	<div class="row">
 		<?php echo $form->label($model,'id_desa_kelurahan'); ?>
 
-			<?php
-				$this->widget('ext.chosen.Chosen',array(
-				   'name' => 'RumahTangga[id_desa_kelurahan]', // input name
-				   'value' => $model->id_desa_kelurahan, // selection
-				   'data' => array(''=>'Semua') + CHtml::listData(DesaKelurahan::model()->findAll(),'id_desa_kelurahan','desa_kelurahan'),
-				));
-			?>
+		<select name="id_provinsi" onChange="call_kabupaten(this)">
+		<option>Pilih</option>
+		<?php
+			$provinsi = Provinsi::model()->findAll();
+			foreach($provinsi as $p)
+			{
+				echo '<option value="'.$p['id_provinsi'].'">'.$p['provinsi'].'</option>';
+			}
+		?>
+		</select>
+
+		<select name="id_kabupaten" id="kabupaten" onChange="call_kecamatan(this)">
+			<option>Pilih</option>
+		</select>
+
+		<select name="id_kecamatan" id="kecamatan" onChange="call_desa(this)">
+			<option>Pilih</option>
+		</select>
+
+		<select name="RumahTangga[id_desa_kelurahan]" id="RumahTangga_id_desa_kelurahan">
+			<option>Pilih</option>
+		</select>
+
 	</div>
 
 	<div class="row">

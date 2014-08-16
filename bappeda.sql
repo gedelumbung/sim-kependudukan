@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 14, 2014 at 04:42 AM
+-- Generation Time: Aug 16, 2014 at 12:11 PM
 -- Server version: 5.5.35
 -- PHP Version: 5.4.4-14+deb7u5
 
@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `tbl_desa_kelurahan` (
   `id_kecamatan` int(10) NOT NULL,
   `desa_kelurahan` varchar(100) NOT NULL,
   PRIMARY KEY (`id_desa_kelurahan`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=63 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
 
 --
 -- Dumping data for table `tbl_desa_kelurahan`
@@ -277,14 +277,15 @@ CREATE TABLE IF NOT EXISTS `tbl_kabupaten` (
   `id_provinsi` int(10) NOT NULL,
   `kabupaten` varchar(100) NOT NULL,
   PRIMARY KEY (`id_kabupaten`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_kabupaten`
 --
 
 INSERT INTO `tbl_kabupaten` (`id_kabupaten`, `id_provinsi`, `kabupaten`) VALUES
-(1, 1, 'Polewali Mandar');
+(1, 1, 'Polewali Mandar'),
+(2, 1, 'Mamuju');
 
 -- --------------------------------------------------------
 
@@ -325,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `tbl_kecamatan` (
   `id_kabupaten` int(10) NOT NULL,
   `kecamatan` varchar(100) NOT NULL,
   PRIMARY KEY (`id_kecamatan`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `tbl_kecamatan`
@@ -347,7 +348,8 @@ INSERT INTO `tbl_kecamatan` (`id_kecamatan`, `id_provinsi`, `id_kabupaten`, `kec
 (13, 1, 1, 'Tapango'),
 (14, 1, 1, 'Tinambung'),
 (15, 1, 1, 'Tubbi Taramanu / Tutallu'),
-(16, 1, 1, 'Wonomulyo');
+(16, 1, 1, 'Wonomulyo'),
+(17, 1, 1, 'xxxx');
 
 -- --------------------------------------------------------
 
@@ -624,7 +626,7 @@ CREATE TABLE IF NOT EXISTS `tbl_perumahan_survey` (
 
 INSERT INTO `tbl_perumahan_survey` (`id_perumahan_survey`, `id_rt`, `jenis_rumah`, `konstruksi_rumah`, `kepemilikan_rumah`, `fungsi_rumah`, `tahun_pembuatan_rumah`, `jumlah_lantai`, `luas_lantai_1`, `luas_lantai_2`, `luas_lantai_3`, `luas_pekarangan`, `bagian_terluas_atap`, `kondisi_atap_rumah`, `bagian_terluas_dinding`, `kondisi_dinding_rumah`, `bagian_terluas_lantai`, `kondisi_lantai_rumah`, `jumlah_kepemilikan_rumah_lainnya`, `alamat_rumah_lainnya`, `kepemilikan_imb`, `penertiban_imb`, `kepemilikan_surat_tanah`, `jarak_sempadan_jalan`, `jarak_sempadan_sungai`, `jarak_sempadan_pantai`, `jarak_sempadan_irigasi`, `gambar`) VALUES
 (1, 2, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Baik', 'Semen', 'Baik', '', 'Denpasar', '', '', 'SKT Camat', '', '', '', '', '5e960336df275d0ad30de2a8a6c8ca86.png'),
-(2, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ffff', '', '', '', '', '', '', '', 'c22de10c720d761a200aca0f735b9b58.png');
+(2, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ffff', '', '', '', '', '', '', '', '26f0a238695c67b86beb494bcfc49676.jpg');
 
 -- --------------------------------------------------------
 
@@ -662,7 +664,7 @@ CREATE TABLE IF NOT EXISTS `tbl_rt` (
   `jumlah_art_meninggal` int(5) NOT NULL,
   `tahun` int(4) NOT NULL,
   PRIMARY KEY (`id_rt`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `tbl_rt`
@@ -671,7 +673,8 @@ CREATE TABLE IF NOT EXISTS `tbl_rt` (
 INSERT INTO `tbl_rt` (`id_rt`, `id_desa_kelurahan`, `nama_krt`, `suku_krt`, `jumlah_art`, `jumlah_anak`, `jumlah_art_meninggal`, `tahun`) VALUES
 (1, 2, 'Gede Suma Wijaya', 'Bali', 3, 1, 0, 2013),
 (2, 2, 'Nengah Sudana', 'Bali', 4, 1, 1, 2014),
-(3, 6, 'Masbulloh', 'Bali', 9, 3, 1, 2014);
+(3, 6, 'Masbulloh', 'Bali', 9, 3, 1, 2014),
+(4, 8, 'dd', 'dsd', 22, 222, 222, 2014);
 
 -- --------------------------------------------------------
 

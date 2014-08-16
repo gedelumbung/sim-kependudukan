@@ -28,27 +28,24 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_provinsi'); ?>
-
+			<select name="Kecamatan[id_provinsi]" onChange="call_kabupaten(this)">
+			<option>Pilih</option>
 			<?php
-				$this->widget('ext.chosen.Chosen',array(
-				   'name' => 'Kecamatan[id_provinsi]', // input name
-				   'value' => $model->id_provinsi, // selection
-				   'data' => array(''=>'Semua') + CHtml::listData(Provinsi::model()->findAll(),'id_provinsi','provinsi'),
-				));
+				$provinsi = Provinsi::model()->findAll();
+				foreach($provinsi as $p)
+				{
+					echo '<option value="'.$p['id_provinsi'].'">'.$p['provinsi'].'</option>';
+				}
 			?>
+			</select>
 		<?php echo $form->error($model,'id_provinsi'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_kabupaten'); ?>
-
-			<?php
-				$this->widget('ext.chosen.Chosen',array(
-				   'name' => 'Kecamatan[id_kabupaten]', // input name
-				   'value' => $model->id_kabupaten, // selection
-				   'data' => array(''=>'Semua') + CHtml::listData(Kabupaten::model()->findAll(),'id_kabupaten','kabupaten'),
-				));
-			?>
+			<select name="Kecamatan[id_kabupaten]" id="kabupaten">
+			<option>Pilih</option>
+			</select>
 		<?php echo $form->error($model,'id_kabupaten'); ?>
 	</div>
 

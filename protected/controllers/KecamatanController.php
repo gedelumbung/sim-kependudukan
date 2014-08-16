@@ -36,7 +36,7 @@ class KecamatanController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','by_kabupaten'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -138,6 +138,20 @@ class KecamatanController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionBy_Kabupaten($id)
+	{
+	   $criteria= new CDbCriteria;  
+	   $criteria->condition ='id_kabupaten = "'.$id.'" ';
+		$model=Kecamatan::model()->findAll($criteria);
+
+		$return = '<option>Pilih</option>';
+		foreach($model as $m)
+		{
+			$return .= '<option value="'.$m['id_kecamatan'].'">'.$m['kecamatan'].'</option>';
+		}
+		echo $return;
 	}
 
 	/**

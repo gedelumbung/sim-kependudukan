@@ -2,7 +2,39 @@
 
 class Kanal_kecController extends Controller
 {
-	public function actionView($id)
+   public function actionView($id)
+   {
+      $model = $this->query($id);
+      $this->render('index', array(
+            'model' => $model,
+            'id' => $id
+         ));
+      
+   }
+
+   public function actionCetak($id)
+   {
+      $model = $this->query($id);
+      $this->renderPartial('cetak', array(
+            'model' => $model,
+            'id' => $id,
+            'status' => 'cetak'
+         ));
+      
+   }
+
+   public function actionExport($id)
+   {
+      $model = $this->query($id);
+      $this->renderPartial('cetak', array(
+            'model' => $model,
+            'id' => $id,
+            'status' => 'export'
+         ));
+      
+   }
+
+	private function query($id)
 	{
 		$merge_id = '';
 
@@ -73,10 +105,7 @@ class Kanal_kecController extends Controller
 	   
 	   $model['penduduk_putus_sekolah'] = Yii::app()->db->createCommand("SELECT b.jumlah, a.tahun FROM tbl_rt a join (select count(x.id_art) as jumlah, x.id_rt from tbl_art x join tbl_art_perorangan y on x.id_art=y.id_art where y.partisipasi_sekolah='Ya') b on a.id_rt=b.id_rt where a.id_desa_kelurahan in (".$merge_id.")  group by a.tahun ")->queryAll();
 
-		$this->render('index', array(
-				'model' => $model,
-				'id' => $id
-			));
+		return $model;
 	}
 
    public function actionGrafik_Penduduk($id)
