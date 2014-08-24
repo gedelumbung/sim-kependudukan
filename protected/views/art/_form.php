@@ -140,7 +140,7 @@
 			    'config'=>array(
 			           'action'=>Yii::app()->createUrl('art/add_gambar'),
 			           'allowedExtensions'=>array("jpg","png"),
-			           'sizeLimit'=>1*1024*1024,// maximum file size in bytes
+			           'sizeLimit'=>5*1024*1024,// maximum file size in bytes
 			           'onComplete'=>"js:function(id, fileName, responseJSON){ 
 			           		$('#Art_gambar').val(responseJSON['filename']); 
 			           		$('#uploadedImage').attr('src', responseJSON['url']);

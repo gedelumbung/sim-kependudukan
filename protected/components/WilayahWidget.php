@@ -4,21 +4,22 @@ class WilayahWidget extends CWidget {
 
     public function run() {
 
-		$provinsi = new Provinsi();
+		/*$provinsi = new Provinsi();
 		$no_prov = 1;
 		foreach($provinsi->findAll() as $prov)
 		{
 		  ?>
 		      <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_prov/<?php echo $prov->id_provinsi; ?>"><i class="fa fa-globe"></i> Provinsi <?php echo $prov->provinsi; ?></a>
 		          <ul>
-		              <?php
+		              <?php */
 		                  $criteria_kab = new CDbCriteria;  
-		                  $criteria_kab->condition ='id_provinsi = "'.$prov->id_provinsi.'" ';
+		                  //$criteria_kab->condition ='id_provinsi = "'.$prov->id_provinsi.'" ';
+		                  $criteria_kab->condition ='id_provinsi = "1" ';
 		                  $kabupaten = Kabupaten::model()->findAll($criteria_kab);
 		                  foreach($kabupaten as $kab)
 		                  {
 		                      ?>
-		                          <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/<?php echo $kab->id_kabupaten; ?>"><span class="text"><i class="fa fa-list"></i> Kabupaten <?php echo $kab->kabupaten; ?></span></a>
+		                          <li><a href="<?php echo Yii::app()->baseUrl; ?>/kanal_kab/<?php echo $kab->id_kabupaten; ?>"><span class="texts"><i class="fa fa-list"></i> Kabupaten <?php echo $kab->kabupaten; ?></span></a>
 		                              <ul>
 		                                  <?php
 		                                      $criteria_kec= new CDbCriteria;  
@@ -54,12 +55,12 @@ class WilayahWidget extends CWidget {
 		                              </ul>
 		                          </li>
 		                      <?php
-		                  }
+		                  } /*
 		              ?>
 		          </ul>
 		      </li>
 		  <?php
 		   $no_prov++;
-		}
+		}*/
     }
 }

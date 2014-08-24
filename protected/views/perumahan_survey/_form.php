@@ -322,7 +322,7 @@
 			    'config'=>array(
 			           'action'=>Yii::app()->createUrl('perumahan_survey/add_gambar'),
 			           'allowedExtensions'=>array("jpg","png"),
-			           'sizeLimit'=>1*1024*1024,// maximum file size in bytes
+			           'sizeLimit'=>5*1024*1024,// maximum file size in bytes
 			           'onComplete'=>"js:function(id, fileName, responseJSON){ 
 			           		$('#PerumahanSurvey_gambar').val(responseJSON['filename']); 
 			           		$('#uploadedImage').attr('src', responseJSON['url']);
@@ -347,6 +347,84 @@
 				$gambar = !empty($model->gambar) ? Yii::app()->baseUrl.'/media/perumahan/'.$model->gambar : '';
 			?>
 			<img id="uploadedImage" src="<?php echo $gambar; ?>">
+		</div>
+	</div>
+</div>
+
+<div class='row-fluid'>
+	<div class="span6">
+		<div class="row">
+			<?php echo $form->labelEx($model,'gambar_2'); ?>
+			<? $this->widget('ext.EAjaxUpload.EAjaxUpload',
+			array(
+			    'id'=>'uploadFile2',
+			    'config'=>array(
+			           'action'=>Yii::app()->createUrl('perumahan_survey/add_gambar'),
+			           'allowedExtensions'=>array("jpg","png"),
+			           'sizeLimit'=>5*1024*1024,// maximum file size in bytes
+			           'onComplete'=>"js:function(id, fileName, responseJSON){ 
+			           		$('#PerumahanSurvey_gambar_2').val(responseJSON['filename']); 
+			           		$('#uploadedImage2').attr('src', responseJSON['url']);
+			           }",
+			           'messages'=>array(
+													'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+													'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+													'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+													'emptyError'=>"{file} is empty, please select files again without it.",
+													'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+			                            ),
+			           'showMessage'=>"js:function(message){ alert(message); }"
+			          )
+			)); ?>
+			<?php echo $form->textField($model,'gambar_2', array('readonly' => true)); ?>
+			<?php echo $form->error($model,'gambar_2'); ?>
+		</div>
+	</div>
+	<div class="span6">
+		<div class="row">
+			<?php
+				$gambar_2 = !empty($model->gambar_2) ? Yii::app()->baseUrl.'/media/perumahan/'.$model->gambar_2 : '';
+			?>
+			<img id="uploadedImage2" src="<?php echo $gambar_2; ?>">
+		</div>
+	</div>
+</div>
+
+<div class='row-fluid'>
+	<div class="span6">
+		<div class="row">
+			<?php echo $form->labelEx($model,'gambar_3'); ?>
+			<? $this->widget('ext.EAjaxUpload.EAjaxUpload',
+			array(
+			    'id'=>'uploadFile3',
+			    'config'=>array(
+			           'action'=>Yii::app()->createUrl('perumahan_survey/add_gambar'),
+			           'allowedExtensions'=>array("jpg","png"),
+			           'sizeLimit'=>5*1024*1024,// maximum file size in bytes
+			           'onComplete'=>"js:function(id, fileName, responseJSON){ 
+			           		$('#PerumahanSurvey_gambar_3').val(responseJSON['filename']); 
+			           		$('#uploadedImage3').attr('src', responseJSON['url']);
+			           }",
+			           'messages'=>array(
+													'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+													'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+													'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+													'emptyError'=>"{file} is empty, please select files again without it.",
+													'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+			                            ),
+			           'showMessage'=>"js:function(message){ alert(message); }"
+			          )
+			)); ?>
+			<?php echo $form->textField($model,'gambar_3', array('readonly' => true)); ?>
+			<?php echo $form->error($model,'gambar_3'); ?>
+		</div>
+	</div>
+	<div class="span6">
+		<div class="row">
+			<?php
+				$gambar_3 = !empty($model->gambar_3) ? Yii::app()->baseUrl.'/media/perumahan/'.$model->gambar_3 : '';
+			?>
+			<img id="uploadedImage3" src="<?php echo $gambar_3; ?>">
 		</div>
 	</div>
 </div>
