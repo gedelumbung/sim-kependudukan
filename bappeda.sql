@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 16, 2014 at 12:11 PM
+-- Generation Time: Aug 25, 2014 at 11:37 AM
 -- Server version: 5.5.35
 -- PHP Version: 5.4.4-14+deb7u5
 
@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `tbl_desa_kelurahan` (
   `id_kecamatan` int(10) NOT NULL,
   `desa_kelurahan` varchar(100) NOT NULL,
   PRIMARY KEY (`id_desa_kelurahan`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=63 ;
 
 --
 -- Dumping data for table `tbl_desa_kelurahan`
@@ -617,16 +617,19 @@ CREATE TABLE IF NOT EXISTS `tbl_perumahan_survey` (
   `jarak_sempadan_pantai` varchar(150) DEFAULT NULL,
   `jarak_sempadan_irigasi` varchar(150) DEFAULT NULL,
   `gambar` varchar(100) NOT NULL,
+  `gambar_2` varchar(100) NOT NULL,
+  `gambar_3` varchar(100) NOT NULL,
   PRIMARY KEY (`id_perumahan_survey`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tbl_perumahan_survey`
 --
 
-INSERT INTO `tbl_perumahan_survey` (`id_perumahan_survey`, `id_rt`, `jenis_rumah`, `konstruksi_rumah`, `kepemilikan_rumah`, `fungsi_rumah`, `tahun_pembuatan_rumah`, `jumlah_lantai`, `luas_lantai_1`, `luas_lantai_2`, `luas_lantai_3`, `luas_pekarangan`, `bagian_terluas_atap`, `kondisi_atap_rumah`, `bagian_terluas_dinding`, `kondisi_dinding_rumah`, `bagian_terluas_lantai`, `kondisi_lantai_rumah`, `jumlah_kepemilikan_rumah_lainnya`, `alamat_rumah_lainnya`, `kepemilikan_imb`, `penertiban_imb`, `kepemilikan_surat_tanah`, `jarak_sempadan_jalan`, `jarak_sempadan_sungai`, `jarak_sempadan_pantai`, `jarak_sempadan_irigasi`, `gambar`) VALUES
-(1, 2, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Baik', 'Semen', 'Baik', '', 'Denpasar', '', '', 'SKT Camat', '', '', '', '', '5e960336df275d0ad30de2a8a6c8ca86.png'),
-(2, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ffff', '', '', '', '', '', '', '', '26f0a238695c67b86beb494bcfc49676.jpg');
+INSERT INTO `tbl_perumahan_survey` (`id_perumahan_survey`, `id_rt`, `jenis_rumah`, `konstruksi_rumah`, `kepemilikan_rumah`, `fungsi_rumah`, `tahun_pembuatan_rumah`, `jumlah_lantai`, `luas_lantai_1`, `luas_lantai_2`, `luas_lantai_3`, `luas_pekarangan`, `bagian_terluas_atap`, `kondisi_atap_rumah`, `bagian_terluas_dinding`, `kondisi_dinding_rumah`, `bagian_terluas_lantai`, `kondisi_lantai_rumah`, `jumlah_kepemilikan_rumah_lainnya`, `alamat_rumah_lainnya`, `kepemilikan_imb`, `penertiban_imb`, `kepemilikan_surat_tanah`, `jarak_sempadan_jalan`, `jarak_sempadan_sungai`, `jarak_sempadan_pantai`, `jarak_sempadan_irigasi`, `gambar`, `gambar_2`, `gambar_3`) VALUES
+(1, 2, '', '', '', '', '', '', '', '', '', '', '', '', '', 'Baik', 'Semen', 'Baik', '', 'Denpasar', '', '', 'SKT Camat', '', '', '', '', '5e960336df275d0ad30de2a8a6c8ca86.png', '', ''),
+(2, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'ffff', '', '', '', '', '', '', '', '26f0a238695c67b86beb494bcfc49676.jpg', '', ''),
+(3, 3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'dsdsd', '', '', '', '', '', '', '', 'c80737d4e696f91546116c078cdc7256.jpg', 'f6fd664bc34863a93e9d08a33c33b886.jpg', '05671ecdbfdae526c059b5c6bcf6bf18.jpg');
 
 -- --------------------------------------------------------
 
