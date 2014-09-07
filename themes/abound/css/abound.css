@@ -66,15 +66,15 @@ h1,h2,h3,h4, .portlet > .portlet-decoration, .sidebar-nav > ul > li > a, .navbar
 .portlet-decoration{
 	border-bottom:1px solid #DDD;
 	background-color: #F1F1F1;
-	background-image: -moz-linear-gradient(top, #802c59, #802c59);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#802c59), to(#802c59));
-	background-image: -webkit-linear-gradient(top, #802c59, #802c59);
-	background-image: -o-linear-gradient(top, #802c59, #802c59);
-	background-image: linear-gradient(to bottom, #802c59, #802c59);
+	background-image: -moz-linear-gradient(top, #FAD511, #FAD511);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FAD511), to(#FAD511));
+	background-image: -webkit-linear-gradient(top, #FAD511, #FAD511);
+	background-image: -o-linear-gradient(top, #FAD511, #FAD511);
+	background-image: linear-gradient(to bottom, #FAD511, #FAD511);
 	background-repeat: repeat-x;
 	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffF1F1F1', endColorstr='#ffDBDBDB', GradientType=0);
 	padding:10px;
-  color: #ffffff;
+  color: #333333;
 }
 
 .portlet-decoration [class^="icon-"], .portlet-decoration [class*=" icon-"] {
