@@ -54,7 +54,6 @@
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.sparkline.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.flot.min.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.flot.pie.min.js');
-	  $cs->registerScriptFile($baseUrl.'/js/charts.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.knob.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.masonry.min.js');
 	  $cs->registerScriptFile($baseUrl.'/js/styleswitcher.js');
@@ -103,6 +102,9 @@
             <!-- Include content pages -->
             <?php echo $content; ?>
     </div>
+    <br>
+    <br>
+    <br>
 </section>
 
 <!-- Require the footer -->

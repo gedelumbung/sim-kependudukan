@@ -18,6 +18,7 @@
                     'encodeLabel'=>false,
                     'items'=>array(
                         array('label'=>'<i class="fa fa-institution"></i> Dashboard', 'url'=>array('/site/index')),
+                        array('label'=>'<i class="fa fa-signal"></i> Grafik', 'url'=>array('/kanal_kab_rest')),
                         array('label'=>'<i class="fa fa-cube"></i> Master Data <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
                         'items'=>array(
                             array('label'=>'<i class="fa fa-cube"></i> Data Provinsi', 'url'=>array('/provinsi')),
